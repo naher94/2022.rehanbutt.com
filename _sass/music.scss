@@ -1,0 +1,96 @@
+.music{
+  margin-bottom: 10em;
+  h2{
+    font-family: $montserrat;
+    font-weight: $montserrat-black;
+    font-size: 10vw;
+    line-height: 7vw;
+    @include breakpoint(medium down) {
+      font-size: 20vw;
+      line-height: 14vw;
+    }
+    .hrs{
+      font-weight: $montserrat-light;
+    }
+    .description{
+      font-size: 5vw;
+      display: block;
+      @include breakpoint(medium down) {
+        font-size: 12vw;
+        line-height: 0.8em;
+        margin-top: 0.2em;
+      }
+    }
+  }
+  h3{
+    font-family: $montserrat;
+    text-align: center;
+    font-weight: $montserrat-bold;
+    margin-top: 3em;
+    margin-bottom: 2em;
+    line-height: 1;
+    @include breakpoint(small only) {
+      text-align: left;
+      margin-top: 1em;
+      margin-bottom: 2em;
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+    }
+  }
+  .song-container{
+    .song-tile{
+      padding-left: 0.9375rem;
+      padding-right: 0.9375rem;
+      @include breakpoint(small only) {
+        margin-bottom: 2em;
+        padding-left: 0;
+        padding-right: 0;
+      }
+      a{
+        &:hover{
+          img{
+            transform: scale(1.05);
+          }
+          .text-container{
+            margin-top: 1em;
+            margin-bottom: 0; //added to remove page shift on hover
+          }
+        }
+        img{
+          border-radius: 40px;
+          box-shadow: 0 0 50px 0 rgba($navy-black, 0.20);
+          transition: $sprint;
+        }
+        .text-container{
+          margin-top: 0.5em;
+          margin-bottom: 0.5em; //added to remove page shift on hover
+          font-family: $montserrat;
+          color: semantic-color(text);
+          transition: $sprint;
+          p{
+            margin: 0;
+            padding: 0;
+            @include breakpoint(medium down) {
+              font-size: 0.8em;
+            }
+            @include breakpoint(small only) {
+              font-size: 1em;
+            }
+          }
+          .title{
+            font-weight: $montserrat-black;
+          }
+          .artist{
+            font-weight: $montserrat-bold;
+            display: inline-block;
+          }
+          .play-count{
+            font-weight: $montserrat-regular;
+            display: inline-block;
+            float: right;
+          }
+        }
+      }
+    }
+  }
+}

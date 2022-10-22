@@ -1,0 +1,435 @@
+.website{
+  background-color: semantic-color(joined-card-bg);
+  border-radius: 50px;
+  padding: 3rem;
+  margin-block-start: 40em;
+  @include breakpoint(small only){
+    padding: 1rem;
+    margin-block-start: 28em;
+  }
+  .elderberry-card{
+    margin-block-start: -20em;
+    background: url('/img/elderberry-texture.png') repeat, linear-gradient(45deg,#ED5D6B, #571A9D);
+    background-blend-mode: color-burn;
+    border-radius: $tile-radius-big;
+    text-align: center;
+    padding: 4rem;
+    position: relative;
+    overflow: hidden;
+    @include breakpoint(small only){
+      padding: 2rem 1rem;
+    }
+    @media (prefers-color-scheme: dark) {
+      background: url('/img/elderberry-texture.png') repeat, linear-gradient(45deg,#bb4752, #3c106e);
+    }
+    .rocket-icon{
+      position: relative;
+      z-index: 2;
+      @include breakpoint(small only){
+        width: 2.5rem;
+      }
+      @media (prefers-color-scheme: dark) {
+        filter: none;
+      }
+    }
+    h2,h3{
+      font-family: $caveat;
+      color: $pure-white;
+      position: relative;
+      z-index: 2;
+    }
+    h2{
+      font-weight: bold;
+      font-size: 12rem;
+      line-height: 0.6;
+      margin-top: 4rem;
+      text-shadow: 0 0 1em $pure-black;
+      @include breakpoint(medium down){
+        font-size: 6rem;
+      }
+      @include breakpoint(small only){
+        font-size: 4rem;
+        margin-top: 1rem;
+      }
+    }
+    h3{
+      font-size: 3rem;
+      @include breakpoint(small only){
+        font-size: 1.5rem;
+      }
+    }
+    .icon-wrapper{
+      margin-top: 2rem;   
+      .feature-icon-container{
+        background-color: rgba($pure-white,0.2);
+        border-radius: $pill-radius;
+        aspect-ratio: 1/1;
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        i{
+          color: $pure-white;
+        }
+      }
+    }
+    .elderflower{
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      opacity: 30%;
+    }
+    .elderflower-left{
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      @include breakpoint(small only){
+        bottom: -15rem;
+        left: -5rem;
+      }
+    }
+    .elderflower-right{
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      @include breakpoint(small only){
+        bottom: -15rem;
+        right: -5rem;
+      }
+    }
+  }
+  .home-sweet-home{
+    position: relative;
+    overflow: hidden;
+    border-radius: $tile-radius-big;
+    text-align: center;
+    .content{
+      padding: 6rem;
+      padding-top: 4rem;
+      position: absolute;
+      z-index: 1;
+      @include breakpoint(small only){
+        padding: 1rem;
+      }
+    }
+    h2,h3{
+      font-family: $caveat;
+      background: -webkit-linear-gradient(45deg,#ED5D6B, #571A9D);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: #571A9D; //in the case of fall back
+    }
+    h2{
+      font-weight: $caveat-bold;
+      font-size: 8rem;
+      @include breakpoint(medium down){
+        font-size: 4rem;
+      }
+      @include breakpoint(small only){
+        font-size: 2rem;
+      }
+    }
+    h3{
+      padding-left: 8rem;
+      padding-right: 8rem;
+      line-height: 1.1em;
+      @include breakpoint(medium down){
+        padding-left: 0;
+        padding-right: 0;
+        text-shadow: 0 0 1em $pure-white;
+        font-size: 2.5rem;
+      }
+      @include breakpoint(small only){
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        font-size: 1.5rem;
+        text-shadow: 0 0 1em $pure-white;
+      }
+    }
+  }
+  .tile-wrapper{
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 100%;
+  }
+  .bio, .speed, .filed-away{
+    border-radius: $tile-radius-big;
+    padding: 3rem;
+    @include breakpoint(medium down){
+      padding: 2rem;
+    }
+    // .square-tile{
+    //   aspect-ratio: 1/1;
+    // }
+  }
+  .bio{
+    background: linear-gradient(-45deg,#5D19A7,#D940B6);
+    color: $pure-white;
+    i{
+      font-size: 5em;
+    }
+    @media (prefers-color-scheme: dark) {
+      background: linear-gradient(-45deg,#3d0e6e,#99287f);
+    }
+    h2{
+      font-weight: $zilla-bold;
+      @include breakpoint(medium down){
+        font-size: 2.3em;
+      }
+      @include breakpoint(small only){
+        padding: 0;
+      }
+    }
+    p{
+      font-family: $caveat;
+      padding: 0;
+      margin: 0;
+      font-size: 2em;
+      line-height: 1;
+      @include breakpoint(medium down){
+        font-size: 1.5em;
+      }
+    }
+  }
+  .speed{
+    color: $pure-white;
+    background: url(../img/speed-stripes.svg), linear-gradient(45deg, rgba(241,206,0,1) 0%, rgba(255,161,0,1) 100%);
+    background-repeat: no-repeat;
+    background-position: center;
+    font-size: 4rem;
+    line-height: 4rem;
+    font-family: $zilla;
+    font-weight: $zilla-bold;
+    @media (prefers-color-scheme: dark) {
+      color: $pure-white;
+      background: url(../img/speed-stripes-darkmode.svg), linear-gradient(45deg, darken(rgba(241,206,0,1),30%) 0%, darken(rgba(255,161,0,1), 30%) 100%);
+      img{
+        filter: none;
+      }
+    }
+    span{
+      display: block;
+    }
+    @include breakpoint(medium down){
+      font-size: 2em;
+      line-height: 2.3rem;
+    }
+    @include breakpoint(small only){
+      font-size: 2.3em;
+    }
+  }
+  .filed-away{
+    background-color: semantic-color(page-bg);
+    @include breakpoint(small only){
+      margin-top: calc(0.625rem * 2);
+    }
+    h2{
+      font-weight: $zilla-bold;
+      @include breakpoint(medium down){
+        font-size: 2.3em;
+      }
+    }
+    p{
+      font-family: $caveat;
+      padding: 0;
+      margin: 0;
+      font-size: 2em;
+      line-height: 1;
+      @include breakpoint(medium down){
+        font-size: 1.5em;
+      }
+    }
+    .cabinet {
+      background-color: $navy-black-d3;
+      width: 250px;
+      height: 200px;
+      padding: 10px;
+      margin: 100px auto 80px auto;
+      border-radius: 15px;
+      transform: scale(1.25);
+      @include breakpoint(medium down){
+        transform: scale(1);
+        margin: 80px auto 0 auto;
+      }
+     }
+     $file-offset: -27px;
+     $file-height: -$file-offset - 2px;
+    .drawer {
+      background-size: 200%;
+      transform: scale(1.15);
+      z-index: 2;
+      box-shadow: 0px 10px 20px rgba($pure-black,0.7);
+      border-radius: 10px;
+      .files {
+        display: block;
+        height: $file-height;
+        top: $file-offset;
+        animation: files 6s infinite ease-in-out;
+      }
+      position: relative;
+      width: 100%;
+      height: 100%;
+      border: 2px solid $navy-black-d3;
+      margin: 0 auto;
+      background: linear-gradient(135deg, $navy-black-l5 0%,$navy-black 40%);
+      background-size: 100%;
+      transition: all 0.5s;
+      box-shadow: 0 0 0 rgba(0,0,0,0);
+      z-index: 1;
+      animation: cabinet 6s infinite ease-in-out;
+      @keyframes files{
+        0%{
+          height: $file-height;
+          top: $file-offset;
+        }
+        30%,80%{
+          height: 0;
+          top: -2px;
+        }
+        90%,100%{
+          height: $file-height;
+          top: $file-offset;
+        }
+      }
+      @keyframes cabinet{
+        0%{
+          transform: scale(1.15);
+        }
+        30%,80%{
+          transform: scale(1);
+        }
+        90%,100%{
+          transform: scale(1.15);
+        }
+      }
+    }
+    .wrapper {
+      margin: 0 auto;
+      top: 50%;
+      transform: translatey(-50%);
+      position: relative;
+      width: 60px;
+    }
+    label {
+      display: block;
+      font-family: $caveat;
+      text-align: center;
+      text-indent: -1px;
+      border-radius: 5px;
+      height: 30px;
+      border: 2px solid $navy-black-l5;
+      background-color: $pure-white;
+      margin-bottom: 30px;
+      margin: 0 auto 30px auto;
+    }
+    .handle {
+      display: block;
+      position: relative;
+      background: $navy-black-l5;
+      width: 100%;
+      height: 7px;
+      border-radius: 500px;
+    }
+    .files {
+      position: absolute;
+      background-color: beige;
+      width: 95%;
+      height: 0;
+      left: 0;
+      right: 0;
+      top: -2px;
+      margin: auto;
+      box-shadow: -2px -2px 5px rgba(0,0,0,0.2);
+      transition: all 1s;
+      &:before,
+      &:after {
+        position: absolute;
+        top: -10px;
+        height: 10px;
+        width: 50%;
+        box-shadow: -1px -2px 5px rgba(0,0,0,0.2);
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+      }
+      &:before {
+        content: '';
+        background-color: beige;
+        left: 0;
+      }
+      &:after {
+        content: '';
+        background-color: darken(beige, 10%);
+        right: 0;
+      }
+    }
+  }
+  .hero-card{
+    background-color: semantic-color(hero-card-bg);
+    color: semantic-color(text-on-dark-bg-always);
+    border-radius: $tile-radius-big;
+    position: relative;
+    margin-bottom: 0;
+    margin-bottom: 0.9375rem;
+    .text-content{
+      padding: 4rem;
+      @include breakpoint(small only){
+        padding: 2rem;
+      }
+    }
+    h3{
+      font-family: $zilla;
+      font-weight: $zilla-bold;
+      font-size: 5em;
+      line-height: 0.8;
+      margin-bottom: 0.5em;
+      @include breakpoint(small only){
+        font-size: 3em;
+        margin-bottom: 0.25em;
+      }
+    }
+    .description{
+      font-size: 2em;
+      line-height: 1.2;
+      padding: 0;
+      margin: 0;
+      @include breakpoint(small only){
+        font-size: 1.5em;
+      }
+    }
+    .easter-egg{
+      font-family: $caveat;
+      font-size: 1.5em;
+      line-height: 1.2;
+      padding: 0;
+      margin: 0;
+      border-radius: 10px;
+      @include breakpoint(small only){
+        margin-top: 0.5em;
+      }
+      img{
+        display: none;
+        position: absolute;
+        bottom: 4em;
+        left: 4em;
+        border-radius: $tile-radius;
+        transform: rotate(7deg) scale(0.8);
+        box-shadow: $recessed-shadow $pure-black;
+        @include breakpoint(small only){
+          bottom: 2em;
+          left: 0.1em;
+        }
+      }
+      &:hover{
+        cursor: pointer;
+        img{
+          display: block;
+        }
+      }
+    }
+    .image-wrapper{
+      padding-top: 1rem;
+      @include breakpoint(small only){
+        padding-top: 0;
+      }
+    }
+  }
+}

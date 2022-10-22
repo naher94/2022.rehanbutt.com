@@ -1,0 +1,150 @@
+{% capture punch-container %}
+<div class="punch-container">
+  <div class="punch"></div>
+  <div class="punch"></div>
+  <div class="punch"></div>
+  <div class="punch"></div>
+  <div class="punch"></div>
+  <div class="punch"></div>
+</div>
+{% endcapture %}
+
+<section class="movie">
+  <div class="horizontal-scroll-section">
+    <div class="scene">
+      <div class="horizontal-scroll-section__content-wrapper wrapper">
+        <div class="horizontal-scroll-section__content-section">
+          {{ punch-container }}
+          <div class="film intro-theme">
+            <img src="/img/popcorn-bucket.svg" alt="Illustration of a bucket of popcorn in red and white">
+          </div>
+          {{ punch-container }}
+        </div>
+        <div class="horizontal-scroll-section__content-section">
+          <img class="popcorn popcorn-1" src="/img/popcorn.svg" alt="Popcorn Illustration">
+          <img class="popcorn popcorn-2" src="/img/popcorn1.svg" alt="Popcorn Illustration">
+          {{ punch-container }}
+          <div class="film feature-number grid-x cell align-center align-middle">
+            <div class="cell shrink">
+              <p>watched</p>
+              <p class="number">161</p>
+              <p>feature films</p>
+            </div>
+          </div>
+          {{ punch-container }}
+        </div>
+        <div class="horizontal-scroll-section__content-section">
+          <img class="movie-ticket" src="/img/movie-ticket.svg" alt="Movie Ticket Illustration">
+          {{ punch-container }}
+          <div class="film rewatch grid-x cell align-center align-middle">
+            <div class="cell shrink">
+              <p class="data-of">*movie stats as of Dec 14, 2021</p>
+              <i class="fas fa-sync-alt"></i>
+              <p class="number">56%</p>
+              <p>which were rewatches</p>
+            </div>
+          </div>
+          {{ punch-container }}
+        </div>
+        <div class="horizontal-scroll-section__content-section">
+          {{ punch-container }}
+          <div class="film infinity-saga grid-x align-middle align-center">
+            <div class="cell grid-x align-center">
+              <h2 class="cell"><span>rewatched Marvel's</span> Infinity Saga <span>over a week</span></h2>
+              <div class="dots cell small-8 grid-x align-justify">
+                <div class="cell shrink"></div>
+                <div class="cell shrink"></div>
+                <div class="cell shrink"></div>
+                <div class="cell shrink"></div>
+                <div class="cell shrink"></div>
+                <div class="cell shrink"></div>
+              </div>
+              <div class="cell">
+                <p>that's <span>23</span> movies</p>
+                <p>lasting <span>49</span> hours & <span>56</span> minutes</p>
+              </div>
+            </div>
+          </div>
+          {{ punch-container }}
+        </div>
+        <div class="horizontal-scroll-section__content-section">
+          <img class="popcorn popcorn-3" src="/img/popcorn2.svg" alt="Popcorn Illustration">
+          {{ punch-container }}
+          <div class="film first-watched grid-x">
+            <div class="cell small-6 grid-x">
+              <div class="cell">
+                <h2><span>1st</span> Watched</h2>
+              </div>
+              <div class="cell align-self-bottom">
+                <p>Soul</p>
+              </div>
+            </div>
+            <div class="cell small-6 poster-wrapper">
+              <img class="poster" src="/img/soul-poster.jpg" alt="Pixar's Soul Movie Poster">
+            </div>
+          </div>
+          {{ punch-container }}
+        </div>
+        <div class="horizontal-scroll-section__content-section">
+          {{ punch-container }}
+          <div class="film grid-x busy-day">
+            <div class="cell small-8 day-most grid-x align-middle">
+              <div class="cell">
+                <h2><span>Sunday</span> Feb 28th</h2>
+                <p>was the busiest with 6 movies watched</p>
+              </div>
+            </div>
+            <div class="cell auto grid-x align-middle averages">
+              <div class="cell grid-x">
+                <div class="cell avg-wrapper">
+                  <p class="number">13</p>
+                  <p>monthly avg</p>
+                </div>
+                <div class="cell avg-wrapper">
+                  <p class="number">3</p>
+                  <p>weekly avg</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          {{ punch-container }}
+        </div>
+        <div class="horizontal-scroll-section__content-section">
+          {{ punch-container }}
+          <div class="film grid-y day-week">
+            <div class="cell shink">
+              <h2>Day of the week <span>Breakdown</span></h2>
+            </div>
+            <div class="cell auto graph grid-x">
+              {%- assign days = "mon,tue,wed,thu,fri,sat,sun" | split: "," -%}
+              {%- assign film-by-days = "12,10,10,6,24,48,49" | split: "," -%}
+              {%- for i in (0..6) -%}
+                <div class="day cell auto grid-x {{days[i]}}">
+                  <div class="height-elem cell grid-x align-self-bottom">
+                    <div class="cell align-self-bottom">
+                      <p>{{ days[i] | slice: 0 }}</p>
+                    </div>
+                  </div>
+                  <div class="hover-number">
+                    {{ film-by-days[i]}} films
+                  </div>
+                </div>
+              {%- endfor -%}
+            </div>
+          </div>
+          {{ punch-container }}
+        </div>
+        <div class="horizontal-scroll-section__content-section">
+          <img class="popcorn popcorn-4" src="/img/popcorn.svg" alt="Popcorn Illustration">
+          {{ punch-container }}
+          <div class="film end-card grid-x align-middle align-center">
+            <div class="cell shrink">
+              <h2>That's all folks!</h2>
+            </div>
+          </div>
+          {{ punch-container }}
+        </div>
+      </div>
+    </div>
+</div>
+</section>

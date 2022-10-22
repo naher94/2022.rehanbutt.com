@@ -1,0 +1,36 @@
+.year-twenty-one{
+
+  .content-container{
+    background-color: white;
+    padding-top: 6rem;
+    padding-bottom: 12rem;
+    background-color: semantic-color(page-bg);
+    @media (prefers-color-scheme: dark) {
+      // background-color: #06080C;
+      color: $pure-white;
+    }
+    @include breakpoint(medium only) {
+      padding-top: 3rem;
+    }
+    @include breakpoint(small only) {
+      padding-top: 1.5rem;
+    }
+  }
+  // .hero{
+  //   .hero-text{
+  //     font-family: $zilla;
+  //     font-size: 2.5em;
+  //     line-height: 1.2em;
+  //     text-align: justify;
+  //     padding-left: 0;
+  //     padding-right: 0;
+  //     @include breakpoint(medium down){
+  //       padding-left: 1em;
+  //       padding-right: 1em;
+  //       font-size: 1.5em;
+  //     }
+  //   }
+  // }
+
+
+}

@@ -1,0 +1,36 @@
+<section class="music grid-container">
+  <div class="grid-x">
+    <div class="cell music-container grid-x">
+      <div class="cell">
+        <h2>564<span class="hrs">hrs</span> <span class="description">of music listened to</span></h2>
+
+        <h3>Top 3 most played songs</h3>
+      </div>
+      <div class="song-container cell grid-x align-center">
+        {% assign songs_order = site.songs | sort: 'play-count' | reverse %}
+          {%- for song in songs_order -%}
+          {% capture song-card %}
+            <img src="img/{{song.album-cover}}" alt="Dance Dance Dance Album Cover">
+            <div class="text-container cell grid-x">
+              <div class="cell">
+                <p class="title">{{song.song-name}}</p>
+              </div>
+              <div class="cell grid-x">
+                <div class="cell auto">
+                  <p class="artist">{{song.artist}}</p>
+                </div>
+                <div class="cell shrink">
+                  <p class="play-count">{{song.play-count}} plays</p>
+                </div>
+              </div>
+            </div>
+          {% endcapture %}
+          <div class="song-tile cell small-8 medium-4 large-4">
+            {%- include external-link.html link=song.link content=song-card -%}
+          </div>
+        {%- endfor -%}
+
+      </div>
+    </div>
+  </div>
+</section>

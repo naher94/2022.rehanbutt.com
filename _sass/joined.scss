@@ -1,0 +1,54 @@
+.joined{
+  margin-top: 10rem;
+  .adplist, .duq{
+    background-color: semantic-color(joined-card-bg);
+    border-radius: $tile-radius-big;
+    padding: 3rem;
+    margin-top: 10rem;
+    @include breakpoint(small only){
+      margin-top: 7rem;
+      padding: 2rem;
+    }
+    p{
+      padding: 0;
+      margin: 0;
+    }
+    .title{
+      font-size: 2rem;
+      font-family: $zilla;
+      font-weight: $zilla-bold;
+      line-height: 1.25;
+      margin-bottom: 1rem;
+    }
+    .explore-button{
+      color: semantic-color(button-primary);
+      padding: 0.5rem 1rem;
+      font-weight: $lato-bold;
+      border: solid semantic-color(button-primary);
+      border-radius: $tile-radius;
+      display: inline-block;
+      transition: $sprint;
+      margin-top: 2rem;
+      &:hover{
+        background-color: semantic-color(button-primary);
+        color: $pure-white;
+      }
+    }
+    .image-container{
+      margin-top: -10rem;
+      margin-bottom: 2rem;
+      @include breakpoint(small only){
+        max-width: 40%;
+        margin-top: -7rem;
+        margin-bottom: 1rem;
+      }
+      @media (prefers-color-scheme: dark) {
+        img{
+          &.adplist-img{
+            filter: invert(100%);
+          }
+        }
+      }
+    }
+  }
+}

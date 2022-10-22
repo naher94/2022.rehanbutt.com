@@ -1,0 +1,122 @@
+.events{
+  margin-top: 20rem;
+  margin-bottom: 20rem;
+  @include breakpoint(small only){
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+  }
+  .dots{
+    position: absolute;
+    width: 100vw;
+    z-index: 0;
+    margin-top: 5rem;
+    @include breakpoint(small only){
+      margin-top: 0;
+    }
+  }
+  .text-container{
+    z-index: 1;
+    position: relative;
+  }
+  h2{
+    text-align: center;
+    font-family: $zilla;
+    font-weight: $zilla-bold;
+    font-size: 8rem;
+    position: relative;
+    @include breakpoint(medium only){
+      font-size: 6rem;
+    }
+    @include breakpoint(small only){
+      font-size: 3rem;
+    }
+    span{
+      font-family: $caveat;
+      font-weight: $caveat-bold;
+      &.left{
+        font-size: 0.8em;
+        position: absolute;
+        transform: rotate(-10deg);
+        left: -12rem;
+        top: -6rem;
+        @include color-shadows;
+        @include breakpoint(medium only){
+          left: -7rem;
+        }
+        @include breakpoint(small only){
+          left: -2rem;
+          top: -3rem;
+        }
+      }
+      &.right-one{
+        font-size: 0.5em;
+        position: absolute;
+        transform: rotate(15deg);
+        right: -8rem;
+        top: -1rem;
+        @include color-shadows;
+        @include breakpoint(medium only){
+          right: -5rem;
+        }
+        @include breakpoint(small only){
+          right: -2rem;
+        }
+      }
+      &.right-two{
+        font-size: 0.3em;
+        position: absolute;
+        transform: rotate(-18deg);
+        right: -12rem;
+        top: -3rem;
+        @include color-shadows;
+        @include breakpoint(medium only){
+          right: -7rem;
+        }
+        @include breakpoint(small only){
+          right: -2rem;
+          top: -2.5rem;
+        }
+      }
+    }
+  }
+  p{
+    text-align: center;
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-top: 0;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+    @include breakpoint(small only){
+      font-size: 1.5rem;
+    }
+  }
+  .logo-container{
+    z-index: 1;
+    position: relative;
+    .cell{
+      // padding: 1rem;
+      img{
+        max-width: 300px;
+        @media (prefers-color-scheme: dark){
+          filter: brightness(1000%) grayscale(80%);
+        }
+        &.ces{
+          @media (prefers-color-scheme: dark){
+            filter: brightness(240%) grayscale(80%);
+          }
+        }
+        @include breakpoint(small only){
+          width: 100%;
+        }
+      }
+    }
+    .leadership-design, .light-box, .view-conf{
+      @include breakpoint(small only){
+        text-align: center;
+        img{
+          width: 120px;
+        }
+      }
+    }
+  }
+}

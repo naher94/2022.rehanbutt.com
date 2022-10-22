@@ -1,0 +1,75 @@
+footer{
+  position: relative;
+  padding: 15rem 0;
+  color: $pure-white;
+  font-family: $zilla;
+  @include breakpoint(medium only){
+    padding: 10rem 0;
+  }
+  @include breakpoint(small only){
+    padding: 8rem 0;
+  }
+  .text-section{
+    z-index: 2;
+    @include breakpoint(small only){
+      text-align: right;
+    }
+    h2{
+      font-weight: $zilla-medium;
+      font-size: 9rem;
+      color: $pure-white;
+      line-height: 0.8em;
+      span{
+        display: block;
+      }
+      @include breakpoint(medium only){
+        font-size: 5rem;
+      }
+      @include breakpoint(small only){
+        font-size: 4rem;
+      }
+    }
+    p{
+      padding: 0;
+      margin: 0;
+      margin-top: 1.1rem;
+      font-weight: $zilla-light;
+      font-size: 5rem;
+      font-style: italic;
+      letter-spacing: 2rem;
+      line-height: 0.8;
+      @include breakpoint(medium only){
+        font-size: 2rem;
+        letter-spacing: 1rem;
+      }
+      @include breakpoint(small only){
+        font-size: 2rem;
+        letter-spacing: 0.5rem;
+      }
+    }
+  }
+  .logo{
+    #rehan-logo-footer{
+      height: 50px;
+      transition: $sprint;
+      &:hover{
+        transform: scale(1.1);
+      }
+      g{
+        fill:$pure-white; //Changes the color of my logo inline
+      }
+      @include breakpoint(small only){
+        height: 40px;
+      }
+      @include breakpoint(small only){
+        height: 40px;
+        margin-top: 4rem;
+        padding-right: 0.5rem;
+      }
+    }
+  }
+  canvas{
+    position: absolute;
+    z-index: -1;
+  }
+}

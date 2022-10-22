@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1441px" height="699px" viewBox="0 0 1441 699" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>dots</title>
+    <g id="dots" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <circle id="red" fill="#E84C3C" cx="1410" cy="334" r="75"></circle>
+        <circle id="blue" fill="#3599DC" cx="1009.5" cy="342.5" r="45.5"></circle>
+        <circle id="yellow" fill="#F2C50F" cx="695.5" cy="145.5" r="76.5"></circle>
+        <circle id="purple" fill="#9C5AB7" cx="58" cy="129" r="102"></circle>
+        <circle id="green" fill="#2ECC71" cx="798" cy="597" r="102"></circle>
+        <circle id="orange" fill="#E77E22" cx="1233" cy="60" r="60"></circle>
+    </g>
+</svg>

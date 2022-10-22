@@ -1,0 +1,25 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: Rehan Butt
+email: me@rehanbutt.com
+year: 2021
+description: > # this means to ignore newlines until "baseurl:"
+  Another year flew by. 2021 continued with the remote-everything world of the previous year. I watched a number of movies, rejoined the world of academia only this time as a faculty member and helped ship some awesome new software products. Let's recap 2021!
+
+baseurl: "" # the subpath of your site, e.g. /blog
+mainurl: "https://rehanbutt.com"
+url: "https://2021.rehanbutt.com" # the base hostname & protocol for your site
+# Build settings
+markdown: kramdown
+
+plugins: [jekyll-sitemap]
+
+collections:
+  songs:
+    output: false

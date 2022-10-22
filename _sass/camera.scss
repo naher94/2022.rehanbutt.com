@@ -1,0 +1,163 @@
+.camera{
+  margin-top: 10rem;
+  height: 100vh;
+  //min-height: 100vh; //min-height breaks vertical centering
+  &:before{
+    content:"";
+    height: 100vh;
+    position: absolute;
+    background-image: url("/img/photo-gallery.png"); //TODO replace this image
+    background-repeat: repeat-x;
+    background-size: contain;
+    animation: marquee 300s infinite linear;
+    display: block;
+    width: 100%;
+    height: 100%;
+    @media (prefers-color-scheme: dark) {
+      filter: brightness(0.8);
+    }
+    @include breakpoint(medium down){
+      background-size: cover;
+    }
+  }
+  .grid-container, .grid-x{
+    height: 100%;
+  }
+  .glass-panel{
+    position: relative;
+    background-color: rgba($pure-white, 0.5);
+    border-radius: $tile-radius-medium;
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+    padding: 2rem;
+    font-family: $big-shoulders;
+    border: 5px solid semantic-color(page-bg);
+    box-shadow: $recessed-shadow;
+    @media (prefers-color-scheme: dark) {
+      background-color: rgba(#06080C, 0.5);
+    }
+    h2{
+      font-family: $big-shoulders;
+      font-weight: $big-shoulders-black;
+      font-size: 6em;
+      line-height: 1;
+      position: relative;
+      margin-bottom: 0.25em;
+      @include breakpoint(small only){
+        font-size: 4em;
+      }
+      span{
+        display: block;
+        &.and{
+          font-size: 2.5em;
+          position: absolute;
+          left: 0;
+          top: -0.1em;
+          font-weight: $big-shoulders-regular;
+          opacity: 0.3;
+          line-height: 1;
+        }
+      }
+    }
+    p{
+      padding: 0;
+      margin: 0;
+      font-size: 2em;
+      line-height: 1.2;
+    }
+    .explore-button{
+      color: $navy-black;
+      padding: 0.5rem 1rem;
+      border: solid $navy-black;
+      border-radius: $tile-radius;
+      font-weight: $big-shoulders-black;
+      display: inline-block;
+      transition: $sprint;
+      margin-top: 2rem;
+      &:hover{
+        background-color: $navy-black;
+        color: $pure-white;
+      }
+      @media (prefers-color-scheme: dark) {
+        color: $pure-white;
+        border: solid $pure-white;
+        &:hover{
+          background-color: $pure-white;
+          color: $navy-black;
+        }
+      }
+    }
+    .sound-wrapper{
+      top: 5em;
+      right: 2em;
+      @include breakpoint(small only){
+        top: -1em;
+        right: 9em;
+      }
+    }
+    .sound-wrapper2{
+      bottom: -2em;
+      right: 4em;
+      transform: rotate(-8deg);
+      @include breakpoint(small only){
+        right: 2em;
+      }
+    }
+    .sound-wrapper, .sound-wrapper2{
+      position: absolute;
+      .pill{
+        display: inline-block;
+        position: absolute;
+        border-radius: $pill-radius;
+        padding: 0.5rem 1.5rem;
+        color: $pure-white;
+        font-weight: $big-shoulders-black;
+        line-height: 1;
+        box-shadow: $recessed-shadow $navy-black;
+        font-size: 2em;
+        &.click1, &.click2{
+          background-color: #830ECA;
+          @media (prefers-color-scheme: dark) {
+            background-color: #58088a;
+          }
+        }
+        &.click1{
+          transform: rotate(10deg);
+          // animation: click-click 2s ease-out infinite;
+        }
+        &.click2{
+          transform: rotate(-15deg);
+          font-size: 1.5em;
+          top: -2em;
+          right: -6em;
+        }
+        &.snap1, &.snap2{
+          background-color: #FFE30F;
+          color: $pure-black;
+          position: relative;
+          @media (prefers-color-scheme: dark) {
+            background-color: #cfb90f;
+          }
+        }
+        &.snap1{
+          aspect-ratio: 1/1;
+          font-size: 1.5em;
+          padding: 0.5em;
+          &:before{
+            content: "📷";
+          }
+          &:hover{
+            &:before{
+              content: "📸";
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes marquee {
+  0% { background-position: 0; }
+  100% { background-position: -6000px; }
+}

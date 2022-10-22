@@ -1,0 +1,64 @@
+.lastly{
+  margin-top: 15rem;
+  @include breakpoint(small only){
+    font-size: 0.5em;
+  }
+  .card{
+    background: semantic-color(lastly-card-bg);
+    border-radius: $tile-radius-big;
+    $card-padding: 2rem;
+    $card-padding-mobile: 1rem;
+    @include breakpoint(small only){
+      padding: $card-padding-mobile;
+    }
+    padding: $card-padding;
+    color: $navy-black;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    transform: rotate(-2deg);
+    @media (prefers-color-scheme: dark){
+      border: none;
+    }
+    .color-field{
+      background: radial-gradient(circle at 0 0, #66FFF6, #A965FF);
+      padding: 3em;
+      border-radius: abs(toRem($tile-radius-big)-$card-padding);
+      @include breakpoint(small only){
+        border-radius: abs(toRem($tile-radius-big)-$card-padding-mobile);
+      }
+      .and{
+        font-size: 12em;
+        font-family: $big-shoulders;
+        font-weight: $big-shoulders-black;
+        margin: 0;
+        line-height: 1;
+      }
+      h2{
+        font-family: $big-shoulders;
+        font-weight: $big-shoulders-black;
+        font-size: 5.3em;
+        line-height: 1;
+        margin: 0;
+        margin-top: -0.1em;
+      }
+      h3{
+        line-height: 1.2;
+        font-weight: $zilla-bold;
+      }
+    }
+    .tweet-wrapper{
+      text-align: center;
+      font-family: $zilla;
+      padding-top: $card-padding;
+      color: semantic-color(text);
+      @include breakpoint(small only){
+        padding-top: $card-padding-mobile;
+        font-size: 2em;
+      }
+      p{
+        padding: 0;
+        margin: 0;
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+}

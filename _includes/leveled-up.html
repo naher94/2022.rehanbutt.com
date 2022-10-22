@@ -1,0 +1,55 @@
+{% assign left-skills = "Design Ops,Project Management,Systems Design,Mentoring,Process Design,Remote Research" | split: ',' %}
+
+{% assign right-skills = "Teaching,Team Manangement,UX Writing,Data Analysis,Motion Design" | split: ',' %}
+
+<section class="leveled-up grid-container">
+  <div class="grid-x align-middle">
+    <div class="cell small-12 large-auto left-skills small-order-3 large-order-1">
+      <div class="pill-container">
+        {%- for skill in left-skills -%}
+          <div class="pill">{{skill}}</div>
+        {%- endfor -%}
+      </div>
+    </div>  
+    <div class="cell small-12 large-shrink icon-container small-order-1 large-order-2">
+      <div class="shape-animation">
+        <span class="large-shapes">
+          <div class="large circle one"></div>
+          <div class="large circle two"></div>
+          <div class="large circle three"></div>
+          <div class="large circle four"></div>
+          <div class="large circle five"></div>
+          <div class="large circle six"></div>
+          <div class="large circle seven"></div>
+          <div class="large circle eight"></div>
+        </span>
+        <span class="small-shapes">
+          <div class="small circle one"></div>
+          <div class="small square two"></div>
+          <div class="small circle three"></div>
+          <div class="small square four"></div>
+          <div class="small circle five"></div>
+          <div class="small square six"></div>
+          <div class="small circle seven"></div>
+          <div class="small square eight"></div>
+        </span>
+        <span class="middle-circle">
+          <i class="fas fa-arrow-up"></i>
+        </span>
+      </div>
+    </div>
+    <div class="cell small-12 large-auto right-skills small-order-4 large-order-3">
+      <div class="pill-container">
+        {%- for skill in right-skills -%}
+          <div class="pill">{{skill}}</div>
+        {%- endfor -%}
+        {%- include external-link.html link="https://rehanbutt.com/about#skills" content="<div class='pill special'>and many more!</div>
+        " -%}
+      </div>
+    </div>
+    <div class="cell align-center text-container small-order-2 medium-order-4">
+      <h2>leveled up</h2>
+      <p>leveled up a bunch more skills this year</p>
+    </div>
+  </div>
+</section>

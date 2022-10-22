@@ -1,0 +1,479 @@
+body, html {
+  overflow-x: hidden;
+}
+
+.movie{
+  position: relative;
+  .popcorn{
+    position: absolute;
+    z-index: 2; 
+    &-1{
+      right: 0;
+      bottom: -6em;
+      width: 10em;
+    }
+    &-2{
+      left: -6em;
+      top: -4em;
+      width: 8em;
+    }
+    &-3{
+      right: -3em;
+      top: -3em;
+      width: 10em;
+    }
+    &-4{
+      left: -3em;
+      bottom: -4em;
+      width: 10em;
+    }
+  }
+  .movie-ticket{
+    position: absolute;
+    bottom: -3em;
+    right: -3em;
+    transform: rotate(10deg);
+    z-index: 2;
+    @include breakpoint(small only){
+      width: 14em;
+    }
+  }
+}
+
+.film{
+  padding: 1rem;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: $pure-white;
+  min-height: 20em;
+  @include breakpoint(small only){
+    font-size: 80%;
+  }
+  &.intro-theme{
+    background: linear-gradient(to top right, #ffab00, #6b0067);
+    position: relative;
+    @media (prefers-color-scheme: dark) {
+      background: linear-gradient(to top right, #835800, #490046);
+    }
+    img{
+      position: absolute;
+      transform: rotate(10deg);
+      max-width: 70%;
+      right: 2.5em;
+      top: 2em;
+    }
+  }
+  &.feature-number{
+    background: linear-gradient(-45deg,#A5FF36,#33D5FF);
+    font-family: $big-shoulders;
+    @media (prefers-color-scheme: dark) {
+      background: linear-gradient(-45deg,#65a01e,#1d829b);
+    }
+    p{
+      margin: 0;
+      padding: 0;
+      line-height: 1;
+      font-size: 4em;
+    }
+    .number{
+      font-weight: $big-shoulders-black;
+      font-size: 9em;
+    }
+  }
+  &.rewatch{
+    background: linear-gradient(180deg,#D10000,#480000);
+    font-family: $big-shoulders;
+    color: $pure-white;
+    position: relative;
+    overflow: hidden;
+    @media (prefers-color-scheme: dark) {
+      background: linear-gradient(180deg,#880000,#290000);
+    }
+    .data-of{
+      font-size: 1em;
+      @include breakpoint(small only){
+        font-size: 1.5em;
+      }
+    }
+    .fas{
+      position: absolute;
+      top: 0.5rem;
+      right: -6rem;
+      font-size: 20em;
+      opacity: 20%;
+    }
+    p{
+      margin: 0;
+      padding: 0;
+      line-height: 1;
+      font-size: 4em;
+    }
+    .number{
+      font-weight: $big-shoulders-black;
+      font-size: 9em;
+    }
+  }
+  &.infinity-saga{
+    background: linear-gradient(-45deg,rgba(#12131F,0.8),rgba(#2C1141,0.8),rgba(#04055D,0.8)), url("/img/comic-pattern.png") no-repeat center center;
+    background-size: cover;
+    font-family: $big-shoulders;
+    color: $pure-white;
+    text-align: center;
+    h2{
+      font-family: $big-shoulders;
+      font-weight: $big-shoulders-black;
+      font-size: 5em;
+      line-height: 1;
+      span{
+        display: block;
+        font-size: 0.5em;
+        font-weight: $big-shoulders-regular;
+        line-height: 1;
+        letter-spacing: 0.05em;
+      }
+    }
+    .dots{
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      @include breakpoint(small only){
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+      }
+      div{
+        aspect-ratio: 1/1;
+        width: 15px;
+        border-radius: $pill-radius;
+        &:nth-of-type(1){
+          background-color: #00CA05;
+        }
+        &:nth-of-type(2){
+          background-color: #D51FFF;
+        }
+        &:nth-of-type(3){
+          background-color: #0881B8;
+        }
+        &:nth-of-type(4){
+          background-color: #FF141E;
+        }
+        &:nth-of-type(5){
+          background-color: #FF9600;
+        }
+        &:nth-of-type(6){
+          background-color: #FFD500;
+        }
+      }
+    }
+    p{
+      margin: 0;
+      padding: 0;
+      line-height: 1.2;
+      font-size: 1.5em;
+      span{
+        font-weight: $big-shoulders-black;
+      }
+    }
+  }
+  &.first-watched{
+    font-family: $big-shoulders;
+    background: linear-gradient(180deg,#090F1B,#0F3774);
+    color: $pure-white;
+    padding: 2rem;
+    h2{
+      font-family: $big-shoulders;
+      font-size: 4.5em;
+      line-height: 1;
+      @include breakpoint(small only){
+        padding: 0;
+      }
+      span{
+        font-weight: $big-shoulders-black;
+      }
+    }
+    p{
+      margin: 0;
+      padding: 0;
+      font-size: 2.5em;
+      line-height: 1;
+    }
+    .poster-wrapper{
+      position: relative;
+    }
+    .poster{
+      border-radius: $tile-radius;
+      box-shadow: $recessed-shadow $pure-black;
+      position: absolute;
+      max-width: 100%;
+      transform: rotate(4deg);
+      bottom: -15%;
+      @include breakpoint(small only){
+        bottom: -40%;
+      }
+    }
+  }
+  &.busy-day{
+    background: linear-gradient(180deg,#3F0707,#3B0030);
+    color: $pure-white;
+    font-family: $big-shoulders;
+    .day-most{
+      background-color: rgba($pure-white, 0.2);
+      border-radius: 12px;
+      padding: 1em;
+      h2{
+        font-family: $big-shoulders;
+        font-weight: $big-shoulders-black;
+        line-height: 1;
+        span{
+          font-weight: $big-shoulders-regular;
+          display: block;
+          font-size: 0.7em;
+        }
+      }
+      p{
+        margin: 0;
+        padding: 0;
+        font-size: 1.8em;
+        line-height: 1.2;
+      }
+    }
+    .averages{
+      padding: 1em;
+      p{
+        margin: 0;
+        padding: 0;
+        font-size: 1.8em;
+        line-height: 1;
+        &.number{
+          font-size: 2.2em;
+          font-weight: $big-shoulders-black;
+        }
+      }
+      .avg-wrapper{
+        &:first-of-type{
+          margin-bottom: 1.5em;
+        }
+      }
+    }
+  }
+  &.day-week{
+    background: linear-gradient(180deg,#00BF8F,#113F4F);
+    padding: 2rem;
+    position: relative;
+    @media (prefers-color-scheme: dark) {
+      background: linear-gradient(#00785a, #113f4f);    
+    }
+    h2{
+      font-family: $big-shoulders;
+      font-weight: $big-shoulders-regular;
+      font-size: 2.5em;
+      color: $pure-white;
+      span{
+        font-weight: $big-shoulders-black;
+        font-size: 1.7em;
+        display: block;
+        line-height: 1;
+      }
+    }
+    .graph{
+      .day{
+        &:not(:last-of-type){
+          margin-right: 5px;
+        }
+        p{
+          font-family: $big-shoulders;
+          color: $pure-white;
+          padding: 0;
+          margin: 0;
+          text-transform: capitalize;
+          text-align: center;
+          font-size: 2em;
+        }
+        .height-elem{
+          background-color: rgba($pure-black, 0.6);
+          border-radius: $tile-radius;
+          transition: $sprint;
+          &:hover{
+            background-color: rgba($pure-white, 0.5);
+            cursor: pointer;
+          }
+          &:hover ~ .hover-number{
+            opacity: 1;
+          }
+        }
+        .hover-number{
+          margin-right: 2rem;
+          margin-top: 2rem;
+          padding: 0.25em 0.5em;
+          opacity: 0;
+          transition: $run;
+          position: absolute;
+          top: 0;
+          right: 0;
+          border-radius: $tile-radius;
+          color: $pure-white;
+          background-color: rgba($pure-black, 0.6);
+          font-family: $big-shoulders;
+          font-weight: $big-shoulders-black;
+          font-size: 1.5em;
+        }
+        &.mon{
+          .height-elem{
+            height: 50%;
+          }
+        }
+        &.tue{
+          .height-elem{
+            // height: 30%;
+          }
+        }
+        &.wed{
+          .height-elem{
+            // height: 30%;
+          }
+        }
+        &.thu{
+          .height-elem{
+            // height: 30%;
+          }
+        }
+        &.fri{
+          .height-elem{
+            height: 80%;
+          }
+        }
+        &.sat{
+          .height-elem{
+            height: 100%;
+          }
+        }
+        &.sun{
+          .height-elem{
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+  &.end-card{
+    color: $pure-white;
+    position: relative;
+    overflow: hidden;
+    font-family: $caveat;
+    &::before{
+      content: "";
+      position: absolute;
+      z-index: 1;
+      background: url("/img/thats-all-folks-bg.jpg") no-repeat center center, radial-gradient(#BF5218,#580510);
+      background-size: cover;
+      display: block;
+      width: 110%;
+      height: 110%;
+      @media (prefers-color-scheme: dark) {
+        filter: brightness(0.8);
+      }
+    }
+    h2{
+      font-family: $caveat;
+      font-weight: $caveat-bold;
+      font-size: 4em;
+      text-shadow: 0 0 0.5em $pure-black;
+      position: relative;
+      z-index: 2;
+    }
+  }
+}
+
+.punch-container{
+  display: inline-flex;
+  justify-content: space-between;
+  min-height: 4rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  width: 100%;
+  @include breakpoint(small only) {
+    min-height: 2.5rem;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+  }
+  .punch{
+    background-color: $pure-white;
+    width: 10%;
+    border-radius: 10px;
+    background-color: semantic-color(page-bg);
+    @media (prefers-color-scheme: dark) {
+      box-shadow: $pure-white 0px 0px 25px -10px inset;
+    }
+  }
+}
+
+.trigger {
+  position: absolute;
+  &--one {
+    left: 0;
+  }
+}
+
+ .scene {
+    position: absolute;
+    height: 100vh;
+    top: 0;
+    left: -14vw; //adjust for start position shift
+    right: 0;
+    transform: rotate(-5deg);
+    &--active {
+      position: fixed;
+    }
+    &--ended {
+      position: absolute;
+      bottom: 0;
+      top: auto;
+    }
+  }
+
+.horizontal-scroll-section {
+  position: relative;
+  &__content {
+    display: flex;
+    align-items: center;
+    &-wrapper {
+      display: flex;
+      height: 100%;
+      align-items: center;
+      position: relative;
+    }
+    &-section {
+      position: relative;
+      padding: 1rem 2rem;
+      min-width: 40rem;
+      background: $pure-black;
+      @include breakpoint(small only) {
+        min-width: 30rem;
+        padding: 0.5rem 1rem;
+      }
+      &:before{
+        position: absolute;
+        content: '';
+        z-index: -1;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        box-shadow: $pure-black $recessed-shadow;
+        @media (prefers-color-scheme: dark) {
+          box-shadow: $pure-white 0px 0px 40px -10px;
+        }
+      }
+      &:last-of-type{
+        border-radius: 0 40px 40px 0;
+        &:before{
+          border-radius: 0 40px 40px 0;
+          @include breakpoint(small only) {
+            border-radius: 0 20px 20px 0;
+          }
+        }
+        @include breakpoint(small only) {
+          border-radius: 0 20px 20px 0;
+        }
+      }
+    }
+  }
+}

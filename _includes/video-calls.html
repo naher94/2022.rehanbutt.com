@@ -1,0 +1,80 @@
+{%- assign them-pic = "/img/aliya.jpg" -%}
+{%- assign me-pic = "/img/rehan.png" -%}
+
+<section class="video-calls">
+  <div class="grid-container">
+    <div class="grid-x align-center">
+      <div class="cell intro">
+        <h2>Video calls continued this year</h2>
+        <p>Teams, Zoom, FaceTime, Slack you name it</p>
+      </div>
+      <div class="cell grid-x large-10 align-self-center">
+        <div class="cell grid-x time-stamp align-center">
+          <p><span>Today</span> 9:07 AM</p>
+        </div>
+        <div class="cell grid-x chat-row">
+          <div class="cell shrink">
+            <div class="profile profile-them">
+              <img src="{{them-pic}}" alt="Headshot photo of Rehan wearing a teal polo">
+            </div>
+          </div>
+          <div class="cell shrink">
+            <div class="bubble-them">
+              incoming call <i class="fas fa-video"></i>
+            </div>
+            <div class="react-wrapper">
+              <div class="bubble-reaction-them">
+                👍 🎉
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cell grid-x chat-row">
+          <div class="cell shrink">
+            <div class="profile profile-them">
+              <img src="{{them-pic}}" alt="Headshot photo of Rehan wearing a teal polo">
+            </div>
+          </div>
+          <div class="cell shrink align-self-middle">
+            <div class="bubble-them">
+              can you see my screen?
+            </div>
+          </div>
+        </div>
+        <div class="cell grid-x align-right chat-row">
+          <div class="cell shrink align-self-middle">
+            <div class="bubble-me">
+              you're on mute
+            </div>
+            <div class="react-wrapper react-wrapper-me">
+              <div class="bubble-reaction-me">
+                😢
+              </div>
+            </div>
+          </div>
+          <div class="cell shrink">
+            <div class="profile profile-me">
+              <img src="{{me-pic}}" alt="Headshot photo of Rehan wearing a teal polo">
+            </div>
+          </div>
+        </div>
+        <div class="cell grid-x align-middle chat-row">
+          <div class="cell shrink">
+            <div class="profile profile-them">
+              <img src="{{them-pic}}" alt="Headshot photo of Rehan wearing a teal polo">
+            </div>
+          </div>
+          <div class="cell shrink">
+            <div class="bubble-them typing">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 17">
+                <circle class="loadingCircle" cx="2.2" cy="10" r="2.2"/>
+                <circle class="loadingCircle" cx="9.5" cy="10" r="2.2"/>
+                <circle class="loadingCircle" cx="16.8" cy="10" r="2.2"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
