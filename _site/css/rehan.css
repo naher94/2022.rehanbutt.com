@@ -5307,7 +5307,7 @@ html.is-reveal-open {
   --color-joined-card-bg: #e9eaeb;
   --color-button-primary: #12abc4;
   --color-hero-card-bg: #1f2937;
-  --color-logo-header: #1f2937;
+  --color-logo-header: #ffffff;
   --color-chat-bubble-them-bg: #E9E9EB;
   --color-lastly-card-bg: #F7F7F7; }
   @media (prefers-color-scheme: dark) {
@@ -5533,53 +5533,25 @@ p a, li a, h3 a {
       padding-top: 1.5rem; } }
 
 header {
-  padding-bottom: 4em;
-  padding-top: 3em;
-  background: linear-gradient(120deg, #FBAA1D 0%, #FDD53E 100%);
+  border-radius: 20px;
+  padding: 3rem;
+  margin-block-start: 3rem;
+  color: #ffffff;
+  background: radial-gradient(circle at top left, #66fff6 0%, #a965ff 100%);
   position: relative; }
   @media (prefers-color-scheme: dark) {
     header {
       background: linear-gradient(120deg, #b87a10 0%, #c2a12b 100%); } }
-  header .number {
-    font-family: "Zilla Slab", serif;
-    font-weight: 700;
-    font-size: 5.8rem;
-    line-height: 0.4; }
-    @media print, screen and (max-width: 39.99875em) {
-      header .number {
-        font-size: 3.5rem; } }
-  header .twenty-one-container {
-    margin-top: 4em;
-    font-family: "Zilla Slab", serif;
-    color: var(--color-text-color); }
-    header .twenty-one-container h1 {
-      font-weight: 500;
-      font-size: 9rem; }
-      @media print, screen and (min-width: 40em) and (max-width: 63.99875em) {
-        header .twenty-one-container h1 {
-          font-size: 8rem; } }
-      @media print, screen and (max-width: 39.99875em) {
-        header .twenty-one-container h1 {
-          font-size: 4rem; } }
-    header .twenty-one-container h2 {
-      position: absolute;
-      margin-top: 1.1rem;
-      font-weight: 300;
-      font-size: 5rem;
-      font-style: italic;
-      letter-spacing: 2rem; }
-      @media print, screen and (min-width: 40em) and (max-width: 63.99875em) {
-        header .twenty-one-container h2 {
-          font-size: 3rem;
-          letter-spacing: 1.5rem;
-          margin-top: 2.5rem; } }
-      @media print, screen and (max-width: 39.99875em) {
-        header .twenty-one-container h2 {
-          font-size: 2rem;
-          letter-spacing: 0.5rem;
-          margin-top: 2.4rem; } }
+  header .subtitle {
+    font-family: "Big Shoulders Display", cursive;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 1.5rem; }
+  header h1 {
+    font-size: 20rem;
+    margin-bottom: -6rem; }
   header .logo #rehan-logo-header {
-    height: 50px;
+    height: 30px;
     transition: all 0.2s ease-in-out; }
     header .logo #rehan-logo-header:hover {
       transform: scale(1.1); }
