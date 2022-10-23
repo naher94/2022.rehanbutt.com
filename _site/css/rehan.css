@@ -5561,18 +5561,24 @@ header {
       header .logo #rehan-logo-header {
         height: 30px; } }
 
-.hero .hero-text {
-  font-family: "Zilla Slab", serif;
-  font-size: 2.5em;
-  line-height: 1.2em;
-  text-align: justify;
-  padding-left: 0;
-  padding-right: 0; }
-  @media print, screen and (max-width: 63.99875em) {
-    .hero .hero-text {
-      padding-left: 1em;
-      padding-right: 1em;
-      font-size: 1.5em; } }
+.hero {
+  margin-top: 2rem; }
+  .hero .content-area {
+    border-radius: 20px;
+    padding: 3rem;
+    background: radial-gradient(circle at bottom left, #DAF5FF 0%, #F7F0FF 100%); }
+  .hero .hero-text {
+    font-family: "Lato", sans-serif;
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0; }
+    @media print, screen and (max-width: 63.99875em) {
+      .hero .hero-text {
+        padding-left: 1em;
+        padding-right: 1em;
+        font-size: 1.5em; } }
+  .hero .emoji-section span:not(:last-of-type) {
+    margin-bottom: 1rem; }
 
 footer {
   position: relative;
