@@ -1,94 +1,69 @@
 .events{
-  margin-top: 20rem;
-  margin-bottom: 20rem;
-  @include breakpoint(small only){
-    margin-top: 10rem;
-    margin-bottom: 10rem;
-  }
-  .dots{
-    position: absolute;
-    width: 100vw;
-    z-index: 0;
-    margin-top: 5rem;
-    @include breakpoint(small only){
-      margin-top: 0;
-    }
+  color: $pure-white;
+  margin-top: 2rem;
+  .content-area{
+    background-color: #0789FF;
+    border-radius: $tile-radius-medium;
+    // padding: 3rem;
   }
   .text-container{
-    z-index: 1;
-    position: relative;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: 3rem;
+    padding-bottom: 4rem;
   }
   h2{
     text-align: center;
-    font-family: $zilla;
-    font-weight: $zilla-bold;
-    font-size: 8rem;
-    position: relative;
-    @include breakpoint(medium only){
-      font-size: 6rem;
-    }
-    @include breakpoint(small only){
-      font-size: 3rem;
-    }
-    span{
-      font-family: $caveat;
-      font-weight: $caveat-bold;
-      &.left{
-        font-size: 0.8em;
-        position: absolute;
-        transform: rotate(-10deg);
-        left: -12rem;
-        top: -6rem;
-        @include color-shadows;
-        @include breakpoint(medium only){
-          left: -7rem;
-        }
-        @include breakpoint(small only){
-          left: -2rem;
-          top: -3rem;
-        }
-      }
-      &.right-one{
-        font-size: 0.5em;
-        position: absolute;
-        transform: rotate(15deg);
-        right: -8rem;
-        top: -1rem;
-        @include color-shadows;
-        @include breakpoint(medium only){
-          right: -5rem;
-        }
-        @include breakpoint(small only){
-          right: -2rem;
-        }
-      }
-      &.right-two{
-        font-size: 0.3em;
-        position: absolute;
-        transform: rotate(-18deg);
-        right: -12rem;
-        top: -3rem;
-        @include color-shadows;
-        @include breakpoint(medium only){
-          right: -7rem;
-        }
-        @include breakpoint(small only){
-          right: -2rem;
-          top: -2.5rem;
-        }
-      }
-    }
+    font-family: $lato;
+    font-weight: $lato-black;
+    font-size: 4rem;
+    line-height: 1.2;
   }
   p{
     text-align: center;
-    font-size: 3rem;
+    font-size: 2rem;
+    font-weight: $lato-black;
     line-height: 1.2;
-    margin-top: 0;
-    padding-left: 0.25rem;
-    padding-right: 0.25rem;
-    @include breakpoint(small only){
-      font-size: 1.5rem;
+    margin: 0;
+    padding: 0;
+    color: rgba($pure-white, .70);
+  }
+  @mixin white-gradient {
+    background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+  }
+  
+  $animationSpeed: 40s;
+  
+  // Animation
+  @keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-250px * 7))} //TODO 7 is the number of logos
+  }
+  .logo-slider {
+    // height: 200px;
+    padding-bottom: 4rem;
+    overflow:hidden;
+    position: relative;
+    background-color: initial;
+    // background-color: lavender;
+    
+    .slide-track {
+      animation: scroll $animationSpeed linear infinite; //TODO UNDO THIS LATER
+      display: flex;
+      // width: calc(250px * 14); //TODO 14 number of logos x2
+      width: 4000px;
     }
+    .slide{
+      margin: 0 2rem;
+      min-width: 60px;
+      img{
+        height: 120px;
+      }
+    }
+    // .slide {
+    //   height: 100px;
+    //   width: 250px;
+    // }
   }
   .logo-container{
     z-index: 1;

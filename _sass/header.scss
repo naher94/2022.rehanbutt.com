@@ -9,6 +9,9 @@ header{
   @media (prefers-color-scheme: dark) {
     background: linear-gradient(120deg, #b87a10 0%, #c2a12b 100%);
   }
+  .title-area{
+    margin-bottom: 5rem;
+  }
   .subtitle{
     font-family: $big-shoulders;
     font-weight: $big-shoulders-black;
