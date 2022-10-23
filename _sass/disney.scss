@@ -1,0 +1,47 @@
+.disney{
+  margin-top: 2rem;
+  color: $pure-white;
+  .content-area{
+    background: linear-gradient(to bottom right, #21195B 0%, #73467F 100%);
+    border-radius: $tile-radius-medium;
+    overflow: hidden;
+    position: relative;
+    &::before{
+      content: "";
+      background-image: url(/img/disney-skyline.svg);
+      background-repeat: no-repeat;
+      background-position: bottom right;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.15;
+    }
+    .text-area{
+      z-index: 1;
+      padding-right: 3rem;
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+      p{
+        padding: 0;
+        margin: 0;
+      }
+      .logo-container{
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+    }
+  }
+  .mickey-image{
+    background-image: url(https://images.unsplash.com/photo-1528287942171-fbe365d1d9ac?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&w=1200&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
+    // background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    mask-image: url(/img/mickey-mask.svg);
+    mask-size: 110%;
+    mask-repeat: no-repeat;
+    mask-position: -5rem, center;
+  }
+}
