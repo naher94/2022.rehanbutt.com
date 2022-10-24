@@ -7,6 +7,7 @@
     // background: semantic-color(lastly-card-bg);
     background-color: #F3F3F3;
     border-radius: $tile-radius-big;
+    margin-bottom: 0;
     $card-padding: 2rem;
     $card-padding-mobile: 1rem;
     @include breakpoint(small only){
@@ -15,11 +16,6 @@
     padding: $card-padding;
     color: $navy-black;
     border: none;
-    // box-shadow: 0 0 20px rgba(0,0,0,0.1);
-    // transform: rotate(-2deg);
-    @media (prefers-color-scheme: dark){
-      border: none;
-    }
     .color-field{
       background: radial-gradient(circle at 0 0, #66FFF6, #A965FF);
       padding: 3em;
@@ -27,38 +23,34 @@
       @include breakpoint(small only){
         border-radius: abs(toRem($tile-radius-big)-$card-padding-mobile);
       }
-      .and{
-        font-size: 12em;
-        font-family: $big-shoulders;
-        font-weight: $big-shoulders-black;
-        margin: 0;
-        line-height: 1;
-      }
-      h2{
-        font-family: $big-shoulders;
-        font-weight: $big-shoulders-black;
-        font-size: 5.3em;
-        line-height: 1;
-        margin: 0;
-        margin-top: -0.1em;
-      }
-      h3{
-        line-height: 1.2;
-        font-weight: $zilla-bold;
-      }
     }
-    .tweet-wrapper{
-      font-family: $zilla;
+    .polaroid-chin{
       padding-top: $card-padding;
-      color: semantic-color(text);
-      @include breakpoint(small only){
-        padding-top: $card-padding-mobile;
-        font-size: 2em;
+      .hidden-mickey{
+        font-family: $lato;
+        font-size: 1.5rem;
+        .question{
+          font-weight: $lato-bold;
+        }
       }
       p{
         padding: 0;
         margin: 0;
-        margin-bottom: 0.5rem;
+        margin-bottom: 0;
+        line-height: 1.2;
+      }
+    }
+    .share-area{
+      font-family: $zilla;
+      color: semantic-color(text);
+      .enjoyed{
+        font-weight: $zilla-bold;
+      }
+      .share-item{
+        background-color: #A965FF;
+        aspect-ratio: 1/1;
+        padding: 0.5em;
+        border-radius: $pill-radius;
       }
     }
   }
