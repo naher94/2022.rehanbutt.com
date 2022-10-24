@@ -43,14 +43,30 @@
     .share-area{
       font-family: $zilla;
       color: semantic-color(text);
+      .words{
+        margin-inline-end: 0.5rem;
+      }
       .enjoyed{
         font-weight: $zilla-bold;
       }
-      .share-item{
-        background-color: #A965FF;
-        aspect-ratio: 1/1;
-        padding: 0.5em;
-        border-radius: $pill-radius;
+      a{
+        color: semantic-color(text);
+        &:hover{
+          .share-item{
+            background-color: rgba($navy-black, 0.10);
+          }
+        }
+        .share-item{
+          aspect-ratio: 1/1;
+          padding: 0.75em;
+          border-radius: $pill-radius;
+          text-align: center;
+          transition: $sprint;
+          i{
+            font-size: 1.3em;
+            vertical-align: text-top;
+          }
+        }
       }
     }
   }
