@@ -4,7 +4,8 @@
     font-size: 0.5em;
   }
   .card{
-    background: semantic-color(lastly-card-bg);
+    // background: semantic-color(lastly-card-bg);
+    background-color: #F3F3F3;
     border-radius: $tile-radius-big;
     $card-padding: 2rem;
     $card-padding-mobile: 1rem;
@@ -13,8 +14,9 @@
     }
     padding: $card-padding;
     color: $navy-black;
-    box-shadow: 0 0 20px rgba(0,0,0,0.1);
-    transform: rotate(-2deg);
+    border: none;
+    // box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    // transform: rotate(-2deg);
     @media (prefers-color-scheme: dark){
       border: none;
     }
@@ -46,7 +48,6 @@
       }
     }
     .tweet-wrapper{
-      text-align: center;
       font-family: $zilla;
       padding-top: $card-padding;
       color: semantic-color(text);
