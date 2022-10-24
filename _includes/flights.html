@@ -24,54 +24,30 @@
               <p class="text-bottom">4 long haul</p>
             </div>
           </div>
-          <div class="grid-x cell">
-            <div class="grid-x cell airport-row align-right">
-              <div class="cell grid-x medium-6">
-                <div class="cell shrink">
-                  <p class="short-code">iad</p>
-                </div>
-                <div class="cell auto grid-x location-subrow align-justify">
-                  <div class="cell shrink">
-                    <p>Washington DC</p>
-                  </div>
-                  <div class="cell shrink">
-                    <p>USA</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="grid-x cell airport-row align-right">
-              <div class="cell grid-x medium-6">
-                <div class="cell shrink">
-                  <p class="short-code">iad</p>
-                </div>
-                <div class="cell auto grid-x location-subrow align-justify">
-                  <div class="cell shrink">
-                    <p>Washington DC</p>
-                  </div>
-                  <div class="cell shrink">
-                    <p>USA</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="grid-x cell airport-row align-right">
-              <div class="cell grid-x medium-6">
-                <div class="cell shrink">
-                  <p class="short-code">iad</p>
-                </div>
-                <div class="cell auto grid-x location-subrow align-justify">
-                  <div class="cell shrink">
-                    <p>Washington DC</p>
-                  </div>
-                  <div class="cell shrink">
-                    <p>USA</p>
-                  </div>
-                </div>
-              </div>
-            </div>
 
+
+          <div class="grid-x cell">
+            {% assign location-list = "(iad|Washington DC|USA),(doh|Doha|Qatar),(lhr|London|UK),(lgw|London|UK),(dxb|Dubai|UAE),(CMN|Casablanca|Morocco),(agp|Malaga|Spain)" | remove: "(" | remove: ")" | split: ',' %}
+            {% for item in location-list %}
+            {% assign each = item | split: '|' %}
+            <div class="grid-x cell airport-row align-right">
+              <div class="cell grid-x medium-6">
+                <div class="cell small-2">
+                  <p class="short-code">{{each[0]}}</p>
+                </div>
+                <div class="cell auto grid-x location-subrow align-justify">
+                  <div class="cell shrink">
+                    <p>{{each[1]}}</p>
+                  </div>
+                  <div class="cell shrink">
+                    <p>{{each[2]}}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
           </div>
+
           <div class="grid-x cell align-right border-top">
             <div class="cell lockup-medium shrink">
               <p class="text-top">airports</p>
