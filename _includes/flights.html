@@ -15,19 +15,19 @@
           <div class="grid-x cell align-right border-bottom">
             <div class="cell shrink lockup-big">
               <p class="text-top">miles</p>
-              <p class="number-big">23,094</p>
-              <p class="text-bottom">0.9x around the world</p>
+              <p class="number-big">29,238</p>
+              <p class="text-bottom">1.2x around the world</p>
             </div>
             <div class="cell shrink lockup-big border-left">
               <p class="text-top">flights</p>
-              <p class="number-big">8</p>
+              <p class="number-big">12</p>
               <p class="text-bottom">4 long haul</p>
             </div>
           </div>
 
 
           <div class="grid-x cell">
-            {% assign location-list = "(iad|Washington DC|USA),(doh|Doha|Qatar),(lhr|London|UK),(lgw|London|UK),(dxb|Dubai|UAE),(CMN|Casablanca|Morocco),(agp|Malaga|Spain)" | remove: "(" | remove: ")" | split: ',' %}
+            {% assign location-list = "(iad|Washington DC|USA),(doh|Doha|Qatar),(lhr|London|UK),(lgw|London|UK),(dxb|Dubai|UAE),(CMN|Casablanca|Morocco),(agp|Malaga|Spain),(lax|Los Angeles|USA)" | remove: "(" | remove: ")" | split: ',' %}
             {% for item in location-list %}
             {% assign each = item | split: '|' %}
             <div class="grid-x cell airport-row align-right">
@@ -51,7 +51,7 @@
           <div class="grid-x cell align-right border-top">
             <div class="cell lockup-medium shrink">
               <p class="text-top">airports</p>
-              <p class="number-big"><i class="fas fa-plane"></i> 7</p>
+              <p class="number-big"><i class="fas fa-plane"></i> 10</p>
             </div>
             <div class="cell lockup-medium shrink border-left">
               <p class="text-top">countries</p>
@@ -59,7 +59,7 @@
             </div>
             <div class="cell lockup-medium shrink border-left">
               <p class="text-top">flight time</p>
-              <p class="number-big"><i class="fas fa-clock"></i> 1d 23h</p>
+              <p class="number-big"><i class="fas fa-clock"></i> 2d 14h</p>
             </div>
           </div>
         </div>
