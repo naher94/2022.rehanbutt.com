@@ -1,22 +1,28 @@
 .music{
+  .music-container{
+    background-color: rgba($navy-black, .1);
+    border-radius: $tile-radius-medium;
+    padding: 2rem;
+    padding-top: 3rem;
+  }
   margin-bottom: 10em;
   h2{
     font-family: $montserrat;
     font-weight: $montserrat-black;
-    font-size: 10vw;
-    line-height: 7vw;
-    @include breakpoint(medium down) {
-      font-size: 20vw;
-      line-height: 14vw;
-    }
+    font-size: 5rem;
+    line-height: 4rem;
+    // @include breakpoint(medium down) {
+    //   font-size: 20rem;
+    //   line-height: 14rem;
+    // }
     .hrs{
       font-weight: $montserrat-light;
     }
     .description{
-      font-size: 5vw;
+      font-size: 3rem;
       display: block;
       @include breakpoint(medium down) {
-        font-size: 12vw;
+        // font-size: 12vw;
         line-height: 0.8em;
         margin-top: 0.2em;
       }
@@ -24,10 +30,10 @@
   }
   h3{
     font-family: $montserrat;
-    text-align: center;
     font-weight: $montserrat-bold;
-    margin-top: 3em;
-    margin-bottom: 2em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-size: 1.5em;
     line-height: 1;
     @include breakpoint(small only) {
       text-align: left;
@@ -39,34 +45,23 @@
   }
   .song-container{
     .song-tile{
-      padding-left: 0.9375rem;
-      padding-right: 0.9375rem;
-      @include breakpoint(small only) {
-        margin-bottom: 2em;
-        padding-left: 0;
-        padding-right: 0;
-      }
+      padding: 0.75rem 0;
       a{
         &:hover{
-          img{
-            transform: scale(1.05);
-          }
           .text-container{
-            margin-top: 1em;
-            margin-bottom: 0; //added to remove page shift on hover
+            background-color: rgba($navy-black, .1);
           }
         }
         img{
-          border-radius: 40px;
-          box-shadow: 0 0 50px 0 rgba($navy-black, 0.20);
-          transition: $sprint;
+          border-radius: 15px;
         }
         .text-container{
-          margin-top: 0.5em;
-          margin-bottom: 0.5em; //added to remove page shift on hover
+          margin-left: 0.5em;
           font-family: $montserrat;
           color: semantic-color(text);
           transition: $sprint;
+          padding: 0 0.5rem;
+          border-radius: $tile-radius-medium;
           p{
             margin: 0;
             padding: 0;
