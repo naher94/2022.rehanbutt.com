@@ -34,9 +34,13 @@
     }
   }
   .mickey-image{
-    background-image: url(https://images.unsplash.com/photo-1528287942171-fbe365d1d9ac?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&w=1200&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
-    // background-size: contain;
-    background-position: center;
+    background-image: url(/img/atthehat.jpg);
+    // background-size: cover;
+    // background-position: center;
+
+    background-size: 110%;
+    background-position: center bottom;
+
     background-repeat: no-repeat;
 
     mask-image: url(/img/mickey-mask.svg);
