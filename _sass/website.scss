@@ -49,6 +49,24 @@
       border-radius: $tile-radius-medium;
       border: 1px solid rgba($pure-black, 0.1);
       margin-block-start: 1rem;
+      color: #78345C;
+      padding: 2em;
+      .fig{
+        width: 5em;
+      }
+      h2{
+        font-family: $big-shoulders;
+        font-weight: $big-shoulders-bold;
+      }
+      p{
+        padding: 0;
+        margin: 0;
+      }
+      .card-collection{
+        border-radius: $tile-radius;
+        background-color: #FFCC00;
+        height: 100%;
+      }
     }
   }
 }
