@@ -5,16 +5,11 @@
     padding: 2rem;
     padding-top: 3rem;
   }
-  margin-bottom: 10em;
   h2{
     font-family: $montserrat;
     font-weight: $montserrat-black;
     font-size: 5rem;
     line-height: 4rem;
-    // @include breakpoint(medium down) {
-    //   font-size: 20rem;
-    //   line-height: 14rem;
-    // }
     .hrs{
       font-weight: $montserrat-light;
     }
