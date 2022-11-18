@@ -1,0 +1,129 @@
+.farewell{
+  .content-area{
+    border-radius: $tile-radius-medium;
+    background: url(/img/chocolate-square2.svg) round #994813;
+    background-size: 10%;
+    color: $pure-black;
+    position: relative;
+    // clip-path: url("#bite");
+    .bite-marks{
+      position: absolute;
+      top: -1em;
+      right: -1em;
+      width: 14em;
+    }
+    @keyframes ticketslide {
+      from {
+        transform: rotate(6deg);
+      }
+    
+      50% {
+        transform: rotate(2deg) translate(30rem, 0);
+      }
+    
+      to {
+        margin-left: 0%;
+        transform: rotate(-10deg) translate(4rem, 0);
+      }
+    }
+
+    .golden-ticket{
+      position: absolute;
+      background-color: aquamarine;
+      width: 75%;
+      padding: 15rem;
+      border-radius: $tile-radius-medium;
+      margin-left: 4em;
+      margin-top: 6rem;
+      transform: rotate(6deg);
+      // animation: ticketslide 1s ease-in-out;
+      // animation-play-state: paused;
+      transition: $run;
+      &:hover{
+        // animation-play-state: running;
+        // z-index: 1;
+        transform: rotate(2deg) translate(16rem, 0);
+        transition: $run;
+      }
+    }
+    .chocolate-wrapper{
+      border-radius: $tile-radius-medium 0 0 $tile-radius-medium;
+      // background-color: #FBBC17;
+      background: url(../img/chocolate-wrapper.jpg);
+      background-size: cover;
+      position: relative;
+      clip-path: polygon(0 0, 80% 0, 100% 100%, 0% 100%);
+      .wrapper-edge{
+        position: absolute;
+        right: -0.5em;
+        z-index: 1;
+        top: -5%;
+        height: 105%;
+        transform: rotate(-3deg);
+        img{
+          height: 105%;
+        }
+      }
+      .intro-copy{
+        padding: 2em;
+        h2{
+          font-family: $caveat;
+          font-weight: $caveat-bold;
+          font-size: 10em;
+          line-height: 1;
+          position: relative;
+          display: inline-block;
+          span{
+            font-size: 0.15em;
+            font-weight: $caveat-regular;
+            text-transform: uppercase;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 1em;
+            text-align: center;
+            letter-spacing: 0.10em;
+            padding-inline-start: 3em;
+          }
+        }
+        p{
+          font-size: 1.25em;
+          padding: 0;
+          margin: 0;
+        }
+      }
+      .big-wins{
+        margin-block-end: 2rem;
+        .badge-sticker{
+          width: 12em;
+          transform: translate(-2em) rotate(-15deg);
+        }
+        .icon-wrapper{
+          aspect-ratio: 1/1;
+          border-radius: $pill-radius;
+          background-color: #FFCD1D;
+          border: 2px solid rgba($pure-black,0.075);
+          width: 3em;
+          text-align: center;
+        }
+      }
+      .bar-footer{
+        font-family: $big-shoulders;
+        border-radius: 0 0 0 $tile-radius-medium;
+        background-color: rgba($pure-white,0.50);
+        padding: 1em 2em;
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        font-weight: $big-shoulders-black;
+        .details{
+          text-transform: uppercase;
+          font-weight: $big-shoulders-regular;
+          .edition{
+            font-weight: $big-shoulders-black;
+            margin-inline-start: 0.5em;
+          }
+        }
+      }
+    }
+  }
+}
