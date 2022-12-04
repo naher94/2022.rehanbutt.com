@@ -1,42 +1,13 @@
 body, html {
-  overflow-x: hidden;
+  // overflow-x: hidden;
 }
 
-.movie{
+.photo{
   position: relative;
-  .popcorn{
-    position: absolute;
-    z-index: 2; 
-    &-1{
-      right: 0;
-      bottom: -6em;
-      width: 10em;
-    }
-    &-2{
-      left: -6em;
-      top: -4em;
-      width: 8em;
-    }
-    &-3{
-      right: -3em;
-      top: -3em;
-      width: 10em;
-    }
-    &-4{
-      left: -3em;
-      bottom: -4em;
-      width: 10em;
-    }
-  }
-  .movie-ticket{
-    position: absolute;
-    bottom: -3em;
-    right: -3em;
-    transform: rotate(10deg);
-    z-index: 2;
-    @include breakpoint(small only){
-      width: 14em;
-    }
+  .content-card{
+    background-color: rebeccapurple;
+    overflow: hidden;
+    border-radius: $tile-radius-medium;
   }
 }
 
@@ -418,7 +389,6 @@ body, html {
     top: 0;
     left: -14vw; //adjust for start position shift
     right: 0;
-    transform: rotate(-5deg);
     &--active {
       position: fixed;
     }
@@ -457,10 +427,6 @@ body, html {
         bottom: 0;
         left: 0;
         right: 0;
-        box-shadow: $pure-black $recessed-shadow;
-        @media (prefers-color-scheme: dark) {
-          box-shadow: $pure-white 0px 0px 40px -10px;
-        }
       }
       &:last-of-type{
         border-radius: 0 40px 40px 0;
