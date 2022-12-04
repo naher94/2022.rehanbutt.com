@@ -1,11 +1,11 @@
 body, html {
-  // overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 .photo{
   position: relative;
   .content-card{
-    background-color: rebeccapurple;
+    background-color: #E9E9E9;
     overflow: hidden;
     border-radius: $tile-radius-medium;
   }
@@ -391,6 +391,7 @@ body, html {
     right: 0;
     &--active {
       position: fixed;
+      //TODO figure out how to have overflow hidden for the card. seems to fight with position fixed.
     }
     &--ended {
       position: absolute;
@@ -412,9 +413,13 @@ body, html {
     }
     &-section {
       position: relative;
-      padding: 1rem 2rem;
+      padding: 2rem;
       min-width: 40rem;
-      background: $pure-black;
+      background: #DEDEDE;
+      border: 2px solid #CCCCCC;
+      border-radius: 50px;
+      margin-right: 1rem;
+      margin-left: 1rem;
       @include breakpoint(small only) {
         min-width: 30rem;
         padding: 0.5rem 1rem;
@@ -427,18 +432,6 @@ body, html {
         bottom: 0;
         left: 0;
         right: 0;
-      }
-      &:last-of-type{
-        border-radius: 0 40px 40px 0;
-        &:before{
-          border-radius: 0 40px 40px 0;
-          @include breakpoint(small only) {
-            border-radius: 0 20px 20px 0;
-          }
-        }
-        @include breakpoint(small only) {
-          border-radius: 0 20px 20px 0;
-        }
       }
     }
   }
