@@ -9,13 +9,16 @@
         {% assign songs_order = site.songs | sort: 'play-count' | reverse %}
           {%- for song in songs_order -%}
           {% capture song-card %}
-            <img src="img/{{song.album-cover}}" alt="Dance Dance Dance Album Cover" class="small-3 album-cover">
+            <img src="img/{{song.album-cover}}" alt="Dance Dance Dance Album Cover" class="album-cover">
             <div class="text-container cell auto grid-x">
               <div class="cell grid-x align-middle">
-                <div class="cell auto">
-                  <p class="title">{{song.song-name}} <i class="fa-solid fa-arrow-up-right-from-square"></i></p>
-                  <p class="artist">{{song.artist}}</p>
-                  <p class="play-count">{{song.play-count}} plays</p>
+                <div class="cell auto grid-x">
+                  <p class="title cell">{{song.song-name}} <i class="fa-solid fa-arrow-up-right-from-square"></i></p>
+                  <!-- TODO ICON NOT SHOWING -->
+                  <div class="cell grid-x">
+                    <p class="artist cell auto">{{song.artist}}</p>
+                    <p class="play-count cell shrink">{{song.play-count}} plays</p>
+                  </div>
                 </div>
               </div>
             </div>
