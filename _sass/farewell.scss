@@ -20,22 +20,57 @@
     }
     .golden-ticket{
       position: absolute;
-      background-color: aquamarine;
+      background: url(../img/chocolate-wrapper.jpg);
+      background-size: cover;
       width: 75%;
-      padding: 15rem;
+      padding: 5em;
       border-radius: $tile-radius-medium;
-      margin-left: 2em;
-      margin-top: 8rem;
+      margin-left: 1em;
+      margin-top: 8em;
       transform: rotate(3deg);
       transition: $run;
       &:hover{
-        transform: rotate(-2deg) translate(6rem, 0) scale(1.2);
+        transform: rotate(-2deg) translate(6em, -3em) scale(1.2);
         transition: $run;
+        box-shadow: $recessed-shadow;
       }
       &:hover + .chocolate-wrapper{
         transition: $run;
         opacity: 0;
-        transform: translate(-20rem);
+        transform: translate(-20em);
+      }
+      .text-line{
+        border-radius: $pill-radius;
+        background-color: black;
+        height: 0.25em;
+      }
+      .line-text{
+        padding-left: 2em;
+        padding-right: 1em;
+        margin: 0;
+        font-family: $big-shoulders;
+        text-transform: uppercase;
+        line-height: 1;
+        letter-spacing: 1em;
+      }
+      .main-title{
+        font-size: 6em;
+        line-height: 1;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        font-family: $big-shoulders;
+        margin-bottom: 0.25em;
+        margin-top: 0.25em;
+      }
+      .main-text{
+        text-align: center;
+        p{
+          padding: 0;
+          &:last-of-type{
+            margin-bottom: 0;
+          }
+        }
       }
     }
     .chocolate-wrapper{
@@ -98,6 +133,11 @@
           border: 2px solid rgba($pure-black,0.075);
           width: 3em;
           text-align: center;
+        }
+        .win-list{
+          .win-words{
+            // font-size: 0.8em;
+          }
         }
       }
       .bar-footer{
