@@ -33,14 +33,13 @@ $nav-radius: 60px;
         font-size: 0.6em;
         text-transform: uppercase;
         margin-bottom: 0.25em;
-        i{
+        .shield{
+          display: inline-block;
           position: relative;
-          background: linear-gradient(rgba(218,67,67,1) 0%, rgba(218,67,67,1) 32%, rgba(255,255,255,1) 32%, rgba(255,255,255,1) 35%, rgba(46,57,167,1) 35%, rgba(46,57,167,1) 100%);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          -webkit-text-stroke: 1px white;
-          text-stroke: 1px white;
-          // remove span css to remove the number in shield
+          img{
+            width: 1em;
+            margin-top: -0.25em;
+          }
           span{
             color: white;
             position: absolute;
@@ -48,12 +47,20 @@ $nav-radius: 60px;
             -webkit-text-fill-color: initial;
             -webkit-text-stroke: 0;
             text-stroke: 0;
-            font-size: 6px;
-            bottom: 0.5em;
+            font-size: 0.3em;
+            bottom: 1.2em;
             left: 0;
             right: 0;
             margin-left: 0;
             font-weight: bold;
+          }
+          .mickey-shield{
+            position: absolute;
+            fill: white;
+            width: 0.35em;
+            bottom: .45em;
+            left: 0.325em;
+            right: 0;
           }
         }
         span{

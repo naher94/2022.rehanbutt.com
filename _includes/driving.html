@@ -15,11 +15,10 @@
         <div class="sign">
           <div class="border">
             <div class="direction">
-              <i class="fas fa-shield">
-                <!-- TODO replace shield -->
-                <!-- remove span to remove the number in shield -->
+              <div class="shield">
+                <img src="/img/shield.svg" alt="Shield">
                 <span>95</span>
-              </i>
+              </div>
               <span>north</span>
             </div>
             <p>Philadelphia</p>
@@ -61,10 +60,11 @@
         <div class="sign">
           <div class="border">
             <div class="direction">
-              <i class="fas fa-shield">
-                <!-- remove span to remove the number in shield -->
-                <span>95</span>
-              </i>
+              <div class="shield">
+                <img src="/img/shield.svg" alt="Shield">
+                {% capture location %}shield{% endcapture %}
+                {% include mickey.svg %}
+              </div>
               <span>north</span>
             </div>
             <p>New York City</p>
