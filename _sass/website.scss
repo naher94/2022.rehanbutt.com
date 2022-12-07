@@ -46,6 +46,12 @@
             margin-bottom: 0.25em;
           }
         }
+        .fa-redo{
+          &:hover{
+            transform: rotate(360deg);
+            transition: $run;
+          }
+        }
       }
     }
     .main-area{
