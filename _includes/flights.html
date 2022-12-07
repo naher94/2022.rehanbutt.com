@@ -1,7 +1,7 @@
 <section class="flights">
   <div class="grid-container">
     <div class="grid-x">
-      <div class="cell medium-6 grid-x content-area">
+      <div class="cell grid-x content-area">
 
         <div class="cell grid-x title-area align-justify align-middle">
           <div class="cell shrink">
@@ -31,7 +31,7 @@
             {% for item in location-list %}
             {% assign each = item | split: '|' %}
             <div class="grid-x cell airport-row align-right">
-              <div class="cell grid-x medium-6">
+              <div class="cell grid-x medium-3">
                 <div class="cell small-2">
                   <p class="short-code">{{each[0]}}</p>
                 </div>

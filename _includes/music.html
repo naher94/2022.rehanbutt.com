@@ -1,15 +1,15 @@
 <section class="music grid-container">
   <div class="grid-x">
-    <div class="cell medium-6 music-container grid-x">
-      <div class="cell">
+    <div class="cell music-container grid-x align-justify">
+      <div class="cell medium-6">
         <h2>19,507<span class="hrs">mins</span> <span class="description">of music listened to</span></h2>
         <h3>Top 5 most played songs</h3>
       </div>
-      <div class="song-container cell grid-x align-center">
+      <div class="song-container cell medium-5 grid-x align-center">
         {% assign songs_order = site.songs | sort: 'play-count' | reverse %}
           {%- for song in songs_order -%}
           {% capture song-card %}
-            <img src="img/{{song.album-cover}}" alt="Dance Dance Dance Album Cover" class="small-3">
+            <img src="img/{{song.album-cover}}" alt="Dance Dance Dance Album Cover" class="small-3 album-cover">
             <div class="text-container cell auto grid-x">
               <div class="cell grid-x align-middle">
                 <div class="cell auto">

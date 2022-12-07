@@ -1,5 +1,6 @@
 .flights{
   color: $pure-white;
+  margin-top: 2rem;
   .content-area{
     border-radius: $tile-radius-medium;
     background: $pure-black;
@@ -24,7 +25,8 @@
         content: "";
         background-image: url(/img/planet.png);
         background-repeat: no-repeat;
-        background-position: -18rem center;
+        // background-position: -18rem center;
+        background-position: -30rem center;
         background-size: 100%;
         position: absolute;
         top: 0px;
