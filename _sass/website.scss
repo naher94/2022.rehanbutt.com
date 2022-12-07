@@ -1,7 +1,13 @@
 .website{
-  background-color: semantic-color(joined-card-bg);
-  border-radius: $tile-radius-medium;
-  padding: 2rem;
+  margin-top: 2rem;
+  // background-color: semantic-color(joined-card-bg);
+  // border-radius: $tile-radius-medium;
+  // padding: 2rem;
+  .website-wrapper{
+    background-color: semantic-color(joined-card-bg);
+    border-radius: $tile-radius-medium;
+    padding: 2rem;
+  }
   .website-content{
     .header-section{
       .mac-buttons{
@@ -9,8 +15,8 @@
         div{
           border-radius: $pill-radius;
           border: 1px solid rgba($pure-black, 0.1);
-          width: 1.5rem;
-          height: 1.5rem;
+          width: 1em;
+          height: 1em;
           margin-inline-end: 0.5rem;
         }
         .close{
@@ -26,27 +32,28 @@
       .address-bar{
         background-color: $pure-white;
         border: 1px solid rgba($pure-black, 0.1);
-        border-radius: $pill-radius;
-        padding: 0.5rem 1rem;
+        border-radius: $tile-radius;
+        padding: 0.5em 1em;
+        font-size: 0.8em;
         .fa-lock{
-          margin-inline-end: 1rem;
+          margin-inline-end: 0.5em;
         }
         a{
           font-weight: $lato-bold;
           color: $navy-black;
         }
         .mickey-container{
-          margin-inline-end: 0.5rem;
+          margin-inline-end: 0.5em;
           .mickey{
-            height: 1.25rem;
-            margin-bottom: 5px;
+            height: 1em;
+            margin-bottom: 0.25em;
           }
         }
       }
     }
     .main-area{
       background-color: $pure-white;
-      border-radius: $tile-radius-medium;
+      border-radius: $tile-radius;
       border: 1px solid rgba($pure-black, 0.1);
       margin-block-start: 1rem;
       color: #78345C;
