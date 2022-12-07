@@ -1,7 +1,7 @@
 ---
-album-cover: "music-difference.jpg"
-song-name: The Difference
-artist: Daya
-play-count: 35
-link: "https://www.youtube.com/watch?v=v5yecn9Ekv0"
+album-cover: "music-charlie.png.webp"
+song-name: Light Switch
+artist: Charlie Puth
+play-count: 31
+link: "https://www.youtube.com/watch?v=WFsAon_TWPQ"
 ---

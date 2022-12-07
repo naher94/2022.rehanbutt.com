@@ -1,7 +1,7 @@
 ---
-album-cover: "music-recap.jpg"
-song-name: Recap
-artist: Kito, VanJess & Channel Tres
-play-count: 31
-link: "https://www.youtube.com/watch?v=CDuadp9t43s"
+album-cover: "music-europa.jpg"
+song-name: Lonely Heart
+artist: Jax Jones, Martin Solveig, GRACEY & Europa
+play-count: 18
+link: "https://www.youtube.com/watch?v=k-5IK3-GMZY"
 ---

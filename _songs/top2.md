@@ -1,7 +1,7 @@
 ---
-album-cover: "music-lifestyle.jpg"
-song-name: Lifestyle (feat. Adam Levine)
-artist: Jason Derulo
-play-count: 33
-link: "https://www.youtube.com/watch?v=gTOYhxubOmk"
+album-cover: "music-diner.jpg"
+song-name: Tom's Diner (feat. Britney Spears)
+artist: Giorgio Morodor
+play-count: 18
+link: "https://www.youtube.com/watch?v=k0dLuNNNk5A"
 ---

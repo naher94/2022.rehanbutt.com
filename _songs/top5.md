@@ -1,7 +1,7 @@
 ---
-album-cover: "music-recap.jpg"
-song-name: Recap
-artist: Kito, VanJess & Channel Tres
-play-count: 31
-link: "https://www.youtube.com/watch?v=CDuadp9t43s"
+album-cover: "music-noone.jpg"
+song-name: No One Dies From Love
+artist: Tove Lo
+play-count: 17
+link: "https://www.youtube.com/watch?v=CMWLX0KXwF4"
 ---
