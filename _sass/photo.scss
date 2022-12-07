@@ -34,21 +34,44 @@ body, html {
       top: 2em;
     }
   }
-  &.feature-number{
-    background: linear-gradient(-45deg,#A5FF36,#33D5FF);
-    font-family: $big-shoulders;
-    @media (prefers-color-scheme: dark) {
-      background: linear-gradient(-45deg,#65a01e,#1d829b);
+  &.now-departing{
+    background-color: unset;
+    padding: 0;
+    .title-text{
+      text-align: center;
+      margin-bottom: 1em;
+      h2{
+        font-family: $lato;
+        text-transform: uppercase;
+        font-weight: $lato-black;
+        font-size: 3em;
+      }
+      i{
+        font-size: 2.5em;
+      }
     }
-    p{
-      margin: 0;
-      padding: 0;
-      line-height: 1;
-      font-size: 4em;
-    }
-    .number{
-      font-weight: $big-shoulders-black;
-      font-size: 9em;
+    .flipboard{
+      p{
+        margin: 0;
+        padding: 0;
+        line-height: 1;
+      }
+      .flip-item{
+        background-color: #1A1A1A;
+        padding: 0.5em;
+        border-radius: $tile-radius;
+        .flip-label{
+          color: white;
+          text-transform: uppercase;
+          margin-bottom: 0.5em;
+        }
+        .flip-value{
+          font-size: 1.5em;
+          text-transform: uppercase;
+          font-family: $source-code;
+          font-weight: $source-code-bold;
+        }
+      }
     }
   }
   &.rewatch{
@@ -353,29 +376,6 @@ body, html {
   }
 }
 
-.punch-container{
-  display: inline-flex;
-  justify-content: space-between;
-  min-height: 4rem;
-  margin-bottom: 1rem;
-  margin-top: 1rem;
-  width: 100%;
-  @include breakpoint(small only) {
-    min-height: 2.5rem;
-    margin-bottom: 0.5rem;
-    margin-top: 0.5rem;
-  }
-  .punch{
-    background-color: $pure-white;
-    width: 10%;
-    border-radius: 10px;
-    background-color: semantic-color(page-bg);
-    @media (prefers-color-scheme: dark) {
-      box-shadow: $pure-white 0px 0px 25px -10px inset;
-    }
-  }
-}
-
 .trigger {
   position: absolute;
   &--one {
@@ -420,6 +420,11 @@ body, html {
       border-radius: 50px;
       margin-right: 1rem;
       margin-left: 1rem;
+      &:first-of-type{
+        min-width: 20rem;
+        background: none;
+        border: none;
+      }
       @include breakpoint(small only) {
         min-width: 30rem;
         padding: 0.5rem 1rem;
@@ -435,4 +440,10 @@ body, html {
       }
     }
   }
+}
+
+.departing{
+  background-color: #232323;
+  color: #E0C200;
+  border: none;
 }
