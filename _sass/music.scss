@@ -4,13 +4,14 @@
     background-color: rgba($navy-black, .1);
     border-radius: $tile-radius-medium;
     padding: 2rem;
-    padding-top: 3rem;
+    // padding-top: 3rem;
   }
   h2{
     font-family: $montserrat;
     font-weight: $montserrat-black;
     font-size: 5rem;
     line-height: 4rem;
+    margin-top: 0.1em;
     .hrs{
       font-weight: $montserrat-light;
     }
@@ -40,12 +41,19 @@
     }
   }
   .song-container{
+    font-size: 0.8em;
     .album-cover{
       aspect-ratio: 1/1; //TODO not working
       max-width: 7em;
     }
     .song-tile{
-      padding: 0.75rem 0;
+      padding: 0.5rem 0;
+      &:first-of-type{
+        padding-top: 0;
+      }
+      &:last-of-type{
+        padding-bottom: 0;
+      }
       a{
         &:hover{
           .text-container{
@@ -53,7 +61,7 @@
           }
         }
         img{
-          border-radius: 15px;
+          border-radius: $tile-radius;
         }
         .text-container{
           margin-left: 0.5em;
@@ -61,7 +69,7 @@
           color: semantic-color(text);
           transition: $sprint;
           padding: 0 0.5rem;
-          border-radius: $tile-radius-medium;
+          border-radius: $tile-radius;
           p{
             margin: 0;
             padding: 0;
@@ -74,6 +82,9 @@
           }
           .title{
             font-weight: $montserrat-black;
+            i{
+              font-size: 0.75em;
+            }
           }
           .artist{
             font-weight: $montserrat-bold;
