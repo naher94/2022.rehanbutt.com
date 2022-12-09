@@ -5,7 +5,36 @@
     background-color: $pure-black;
     color: $pure-white;
     font-family: $big-shoulders;
+    // display: grid;
+    // grid-template-columns: repeat(22, 1fr);
+    // grid-template-rows: repeat(14, 1fr);
     .top-picks{
+      // grid-column: 1 / 11;
+      // grid-row: first-line / last-line;
+      .poster-container{
+        .poster-box{
+          &:not(:first-of-type){
+            margin-top: -3em;
+          }
+          &:nth-of-type(1){
+            .poster{
+              transform: rotate(7deg);
+              z-index: 2;
+            }
+          }
+          &:nth-of-type(2){
+            .poster{
+              transform: rotate(-10deg) scale(0.9);
+              z-index: 1;
+            }
+          }
+          &:nth-of-type(3){
+            .poster{
+              transform: rotate(5deg) scale(0.8);
+            }
+          }
+        }
+      }
       .poster{
         max-width: 10em;
         position: relative;
@@ -25,15 +54,6 @@
         img{
           border-radius: $tile-radius;
           box-shadow: $centered-shadow rgba($pure-black, 0.5);
-        }
-        &:nth-of-type(1){
-          transform: rotate(7deg);
-        }
-        &:nth-of-type(2){
-          transform: rotate(-10deg) scale(0.9);
-        }
-        &:nth-of-type(3){
-          transform: rotate(5deg) scale(0.8);
         }
       }
       .movie-list{

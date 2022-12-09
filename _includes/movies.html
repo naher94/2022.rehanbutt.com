@@ -4,33 +4,43 @@
 <section class="movies">
   <div class="grid-container">
     <div class="grid-x content-area">
-      <div class="cell grid-x top-picks">
-        <div class="poster">
-          <p>1</p>
-          <img src="/img/movie-spiderman.jpg" alt="Spider-Man No Way Home Poster">
-        </div>
-        <div class="poster">
-          <p>2</p>
-          <img src="/img/movie-spiderman.jpg" alt="Spider-Man No Way Home Poster">
-        </div>
-        <div class="poster">
-          <p>3</p>
-          <img src="/img/movie-spiderman.jpg" alt="Spider-Man No Way Home Poster">
-        </div>
-        <div class="movie-list cell grid-x">
-          <div class="cell">
-            <h3>top picks<span>2022</span></h3>
-          </div>
-          {% assign i = 1 %}
-          {%- for movie in movie-list -%}
-          <div class="movie-item cell grid-x align-middle">
-            <div class="number cell grid-x align-middle align-center shrink">
-              <p class="cell">{{i}}</p>
+      <div class="cell grid-x top-picks medium-6">
+        <div class="poster-container cell medium-6 grid-x">
+          <div class="cell poster-box">
+            <div class="poster">
+              <p>1</p>
+              <img src="/img/movie-spiderman.jpg" alt="Spider-Man No Way Home Poster">
             </div>
-            <span class="title cell auto">{{movie}}</span>
           </div>
-          {% assign i = i | plus:1 %}
-          {%- endfor -%}
+          <div class="cell grid-x align-right poster-box">
+            <div class="poster cell">
+              <p>2</p>
+              <img src="/img/movie-spiderman.jpg" alt="Spider-Man No Way Home Poster">
+            </div>
+          </div>
+          <div class="cell poster-box">
+            <div class="poster">
+              <p>3</p>
+              <img src="/img/movie-spiderman.jpg" alt="Spider-Man No Way Home Poster">
+            </div>
+          </div>
+        </div>
+        <div class="movie-list-container grid-x cell medium-6 align-top">
+          <div class="movie-list cell grid-x">
+            <div class="cell">
+              <h3>top picks<span>2022</span></h3>
+            </div>
+            {% assign i = 1 %}
+            {%- for movie in movie-list -%}
+            <div class="movie-item cell grid-x align-middle">
+              <div class="number cell grid-x align-middle align-center shrink">
+                <p class="cell">{{i}}</p>
+              </div>
+              <span class="title cell auto">{{movie}}</span>
+            </div>
+            {% assign i = i | plus:1 %}
+            {%- endfor -%}
+          </div>
         </div>
       </div>
     </div>
