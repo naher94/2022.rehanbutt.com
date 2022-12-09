@@ -1,3 +1,5 @@
+$movie-list-text-shadow: 0 0 10px $pure-black;
+
 .movies{
   margin-top: 2rem;
   .content-area{
@@ -5,14 +7,28 @@
     background-color: $pure-black;
     color: $pure-white;
     font-family: $big-shoulders;
-    // display: grid;
-    // grid-template-columns: repeat(22, 1fr);
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
     // grid-template-rows: repeat(14, 1fr);
+    grid-gap: 10px;
+    grid-template-areas: "top-picks top-picks top-picks top-picks top-picks top-picks . . . . . .";
+    padding: 2em;
     .top-picks{
       // grid-column: 1 / 11;
-      // grid-row: first-line / last-line;
+      grid-area: top-picks;
+      display: grid;
+      // subgrid not supported by Chrome
+      // grid-template-columns: subgrid;
+      grid-template-columns: repeat(6, 1fr);
+      grid-gap: 10px;
       .poster-container{
+        grid-column: 1/4;
+        grid-row: 1;
+        // margin-left: 5em;
         .poster-box{
+          .poster{
+            position: relative;
+          }
           &:not(:first-of-type){
             margin-top: -3em;
           }
@@ -33,17 +49,44 @@
               transform: rotate(5deg) scale(0.8);
             }
           }
+          .popcorn{
+            position: absolute;
+            fill: $popcorn-yellow-1;
+            z-index: -1;
+          }
+          #popcorn-1{
+            fill: $popcorn-yellow-1;
+            top: 25%;
+            bottom: 0;
+            right: -50%;
+            width: 75%;
+            transform: rotate(15deg);
+          }
+          #popcorn-2{
+            fill: $popcorn-yellow-2;
+            bottom: -30%;
+            left: 30%;
+            width: 50%;
+            transform: rotate(-15deg);
+          }
+          #popcorn-3{
+            fill: $popcorn-yellow-3;
+            top: -30%;
+            left: -75%;
+            width: 120%;
+            transform: rotate(-20deg);
+          }
         }
       }
       .poster{
-        max-width: 10em;
+        max-width: 8em;
         position: relative;
         p{
           padding: 0;
           margin: 0;
           font-family: $lato;
           font-weight: $lato-black;
-          font-size: 10em;
+          font-size: 8em;
           line-height: 1;
           position: absolute;
           bottom: -0.15em;
@@ -55,6 +98,13 @@
           border-radius: $tile-radius;
           box-shadow: $centered-shadow rgba($pure-black, 0.5);
         }
+      }
+      .movie-list-container{
+        grid-column: 4/7;
+        grid-row: 1;
+        z-index: 1;
+        font-size: 0.8em;
+        text-shadow: $movie-list-text-shadow;
       }
       .movie-list{
         h3{
@@ -87,6 +137,7 @@
             text-align: center;
             margin-right: 0.5em;
             display: flex;
+            text-shadow: none;
             p{
               margin: 0;
               padding: 0;
@@ -98,6 +149,7 @@
               border: 2px solid $pure-white;
               color: $pure-white;
               background-color: unset;
+              text-shadow: $movie-list-text-shadow;
             }
           }
           .title{
