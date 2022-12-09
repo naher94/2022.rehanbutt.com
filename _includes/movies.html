@@ -1,0 +1,26 @@
+{% assign movie-list = "Spider-Man No Way Home, Tenet, Strange World, Thor: Love and Thunder, Movie!!" | split: ',' %}
+
+
+<section class="movies">
+  <div class="grid-container">
+    <div class="grid-x content-area">
+      <div class="cell grid-x top-picks">
+        <div class="movie-list cell grid-x">
+          <div class="cell">
+            <h3>top picks<span>2022</span></h3>
+          </div>
+          {% assign i = 1 %}
+          {%- for movie in movie-list -%}
+          <div class="movie-item cell grid-x align-middle">
+            <div class="number cell grid-x align-middle align-center shrink">
+              <p class="cell">{{i}}</p>
+            </div>
+            <span class="title cell auto">{{movie}}</span>
+          </div>
+          {% assign i = i | plus:1 %}
+          {%- endfor -%}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
