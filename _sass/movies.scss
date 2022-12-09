@@ -5,54 +5,86 @@
     background-color: $pure-black;
     color: $pure-white;
     font-family: $big-shoulders;
-    .movie-list{
-      h3{
-        font-size: 3em;
-        font-family: $big-shoulders;
-        font-weight: $big-shoulders-black;
+    .top-picks{
+      .poster{
+        max-width: 10em;
         position: relative;
-        display: inline-block;
-        span{
-          font-weight: $big-shoulders-regular;
-          transform: rotate(90deg);
-          font-size: .5em;
-          position: absolute;
-          top: 0;
-          bottom: 0;
-          right: -0.75em;
-          padding-inline-start: 0.25em;
-        }
-      }
-      .movie-item{
-        .number{
-          aspect-ratio: 1/1;
-          border-radius: $pill-radius;
-          background-color: $pure-white;
-          color: $pure-black;
-          display: inline-block;
+        p{
+          padding: 0;
+          margin: 0;
           font-family: $lato;
           font-weight: $lato-black;
-          min-width: 1.5em;
-          text-align: center;
-          margin-right: 0.5em;
-          display: flex;
-          p{
-            margin: 0;
-            padding: 0;
-            line-height: 1;
-          }
+          font-size: 10em;
+          line-height: 1;
+          position: absolute;
+          bottom: -0.15em;
+          left: -0.35em;
+          color: $pure-black;
+          -webkit-text-stroke: 2px $pure-white;
         }
-        &:nth-last-of-type(2),&:last-of-type {
-          .number{
-            border: 2px solid $pure-white;
-            color: $pure-white;
-            background-color: unset;
-          }
+        img{
+          border-radius: $tile-radius;
+          box-shadow: $centered-shadow rgba($pure-black, 0.5);
         }
-        .title{
-          font-size: 1.5em;
+        &:nth-of-type(1){
+          transform: rotate(7deg);
+        }
+        &:nth-of-type(2){
+          transform: rotate(-10deg) scale(0.9);
+        }
+        &:nth-of-type(3){
+          transform: rotate(5deg) scale(0.8);
         }
       }
-    }
+      .movie-list{
+        h3{
+          font-size: 3em;
+          font-family: $big-shoulders;
+          font-weight: $big-shoulders-black;
+          position: relative;
+          display: inline-block;
+          span{
+            font-weight: $big-shoulders-regular;
+            transform: rotate(90deg);
+            font-size: .5em;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: -0.75em;
+            padding-inline-start: 0.25em;
+          }
+        }
+        .movie-item{
+          .number{
+            aspect-ratio: 1/1;
+            border-radius: $pill-radius;
+            background-color: $pure-white;
+            color: $pure-black;
+            display: inline-block;
+            font-family: $lato;
+            font-weight: $lato-black;
+            min-width: 1.5em;
+            text-align: center;
+            margin-right: 0.5em;
+            display: flex;
+            p{
+              margin: 0;
+              padding: 0;
+              line-height: 1;
+            }
+          }
+          &:nth-last-of-type(2),&:last-of-type {
+            .number{
+              border: 2px solid $pure-white;
+              color: $pure-white;
+              background-color: unset;
+            }
+          }
+          .title{
+            font-size: 1.5em;
+          }
+        }
+      }
+    }  
   }
 }
