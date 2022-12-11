@@ -9,14 +9,40 @@ $movie-list-text-shadow: 0 0 10px $pure-black;
     font-family: $big-shoulders;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    // grid-template-rows: repeat(14, 1fr);
+    grid-template-rows: repeat(6, 1fr);
     grid-gap: 10px;
-    grid-template-areas: "top-picks top-picks top-picks top-picks top-picks top-picks . . . . . .";
+    // grid-template-areas: 
+    // "top-picks top-picks top-picks top-picks top-picks top-picks . . . . . .
+    // top-picks top-picks top-picks top-picks top-picks top-picks . . . . . .
+    // top-picks top-picks top-picks top-picks top-picks top-picks . . . . . .
+    // top-picks top-picks top-picks top-picks top-picks top-picks . . . . . .
+    // top-picks top-picks top-picks top-picks top-picks top-picks . . . . . .
+    // top-picks top-picks top-picks top-picks top-picks top-picks . . . . . .";
     padding: 2em;
+    position: relative;
+    overflow: hidden;
+    .title-container{
+      grid-column: 10 / 13;
+      grid-row: 1 / 1;
+      h2{
+        font-family: $big-shoulders;
+        font-weight: $big-shoulders-light;
+        text-transform: uppercase;
+        text-align: right;
+        margin-bottom: 0;
+        line-height: 1;
+        font-size: 2.5em;
+      }
+    }
+    .bucket-container{
+      position: absolute;
+      bottom: -9em;
+      right: -2em;
+    }
     .top-picks{
-      grid-row: 1/1;
+      grid-row: 1 / 7;
       grid-column: 1 / 7;
-      grid-area: top-picks;
+      // grid-area: top-picks;
       display: grid;
       // subgrid not supported by Chrome
       // grid-template-columns: subgrid;
@@ -161,18 +187,15 @@ $movie-list-text-shadow: 0 0 10px $pure-black;
     }
     .wrap-party{
       grid-column: 4/9;
-      grid-row: 1/1;
+      grid-row: 6/7;
       position: relative;
-      .ticket-wrapper{
-        // position: absolute;
-        // bottom: 0;
-        // transform: scale(0.8);
-      }
+      transform: scale(0.85);
       .back-ticket-container{
         filter: drop-shadow(0 0 20px rgba(#000, 0.75));
         transform: scale(.5) rotate(8deg);
         position: absolute;
         bottom: 6em;
+        z-index: 1;
         .ticket {
           display:inline-block;
           background: #745A25;
@@ -215,11 +238,6 @@ $movie-list-text-shadow: 0 0 10px $pure-black;
                 margin-left: 0.15em;
               }
             }
-            .right{
-              img{
-                // border-radius: 0 10px 10px 0;
-              }
-            }
           }
         }
       }
@@ -229,6 +247,7 @@ $movie-list-text-shadow: 0 0 10px $pure-black;
         transform: scale(0.9) rotate(-10deg);
         position: absolute;
         bottom: 0;
+        z-index: 2;
         .ticket-left {
           display: inline-flex;
           background: #750046;
@@ -316,6 +335,65 @@ $movie-list-text-shadow: 0 0 10px $pure-black;
             }
           }
         }
+      }
+      #popcorn-4{
+        fill: $popcorn-yellow-3;
+        bottom: -80%;
+        right: -15%;
+        position: absolute;
+        transform: scale(175%) rotate(-6deg);
+      }
+      #popcorn-5{
+        fill: $popcorn-yellow-1;
+        bottom: -60%;
+        right: 30%;
+        position: absolute;
+        transform: scale(50%) rotate(10deg);
+        z-index: 3;
+      }
+    }
+    .total-watched{
+      grid-column: 8 / 11;
+      grid-row: 1 / 3;
+      font-size: 1.35em;
+      position: relative;
+      transform: rotate(-10deg);
+      .text-container{
+        position: relative;
+        z-index: 2;
+      }
+      p{
+        font-family: $big-shoulders;
+        margin: 0;
+        padding: 0;
+        line-height: 1;
+        text-shadow: $movie-list-text-shadow;
+      }
+      .number{
+        font-weight: $big-shoulders-black;
+        font-size: 2em;
+      }
+      .sub-description{
+        font-family: $zilla;
+        font-weight: $zilla-light;
+        font-size: 0.75em;
+        color: #4d4d4d;
+      }
+      #popcorn-6{
+        fill: $popcorn-yellow-2;
+        position: absolute;
+        width: 2em;
+        transform: rotate(12deg);
+        top: -35%;
+        left: 16%;
+      }
+      #popcorn-7{
+        fill: $popcorn-yellow-2;
+        position: absolute;
+        width: 1.5em;
+        transform: rotate(25deg);
+        top: -15%;
+        left: 37%;
       }
     }
   }

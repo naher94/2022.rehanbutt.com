@@ -4,6 +4,12 @@
 <section class="movies">
   <div class="grid-container">
     <div class="grid-x content-area">
+      <div class="title-container">
+        <h2>film log</h2>
+      </div>
+      <div class="bucket-container">
+        <img src="/img/popcorn-bucket-empty.svg" alt="An illustration of an empty red and white striped popcorn bucket">
+      </div>
       <div class="top-picks">
         <div class="poster-container">
           <div class="poster-box">
@@ -49,14 +55,14 @@
           </div>
         </div>
       </div>
-      <div class="wrap-party">
+      <div class="wrap-party grid-x">
         <div class="ticket-wrapper">
-          <div class="back-ticket-container">
+          <div class="back-ticket-container cell">
             <div class="ticket">
               <div class="content grid-x">
                 <div class="left cell small-3 grid-x align-middle align-center">
                   <div class="cell">
-                    <p>Los Angeles Nov 2022</p>
+                    <p>Los Angeles <br> Nov 2022</p>
                   </div>
                 </div>
                 <div class="right cell auto">
@@ -65,7 +71,7 @@
               </div>
             </div>
           </div>
-          <div class="main-ticket-container grid-x">
+          <div class="main-ticket-container cell grid-x">
             <div class="ticket-left cell auto">
               <div class="content">
                 <img src="/img/splat-scene4.jpg" alt="A photo of a installation of Disney's Strange World featuring Splat">
@@ -86,6 +92,24 @@
             </div>
           </div>
         </div>
+        <div class="popcorn-wrapper cell">
+          {% capture name %}4{% endcapture %}
+          {% include popcorn.svg %}
+          {% capture name %}5{% endcapture %}
+          {% include popcorn.svg %}
+        </div>
+      </div>
+      <div class="total-watched">
+        <div class="text-container">
+          <p>watched</p>
+          <p class="number">161</p> 
+          <p>featured films</p>
+          <p class="sub-description">54% were rewatches</p>
+        </div>
+        {% capture name %}6{% endcapture %}
+        {% include popcorn.svg %}
+        {% capture name %}7{% endcapture %}
+        {% include popcorn.svg %}
       </div>
     </div>
   </div>
