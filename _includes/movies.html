@@ -4,9 +4,9 @@
 <section class="movies">
   <div class="grid-container">
     <div class="grid-x content-area">
-      <div class="cell grid-x top-picks medium-6">
-        <div class="poster-container cell medium-6 grid-x">
-          <div class="cell poster-box">
+      <div class="top-picks">
+        <div class="poster-container">
+          <div class="poster-box">
             <div class="poster">
               <p>1</p>
               <img src="/img/movie-spiderman.jpg" alt="Spider-Man No Way Home Poster">
@@ -16,16 +16,22 @@
             <div class="poster cell">
               <p>2</p>
               <img src="/img/movie-spiderman.jpg" alt="Spider-Man No Way Home Poster">
+              {% capture name %}1{% endcapture %}
+              {% include popcorn.svg %}
+              {% capture name %}2{% endcapture %}
+              {% include popcorn.svg %}
             </div>
           </div>
           <div class="cell poster-box">
             <div class="poster">
               <p>3</p>
               <img src="/img/movie-spiderman.jpg" alt="Spider-Man No Way Home Poster">
+              {% capture name %}3{% endcapture %}
+              {% include popcorn.svg %}
             </div>
           </div>
         </div>
-        <div class="movie-list-container grid-x cell medium-6 align-top">
+        <div class="movie-list-container">
           <div class="movie-list cell grid-x">
             <div class="cell">
               <h3>top picks<span>2022</span></h3>
@@ -40,6 +46,44 @@
             </div>
             {% assign i = i | plus:1 %}
             {%- endfor -%}
+          </div>
+        </div>
+      </div>
+      <div class="wrap-party">
+        <div class="ticket-wrapper">
+          <div class="back-ticket-container">
+            <div class="ticket">
+              <div class="content grid-x">
+                <div class="left cell small-3 grid-x align-middle align-center">
+                  <div class="cell">
+                    <p>Los Angeles Nov 2022</p>
+                  </div>
+                </div>
+                <div class="right cell auto">
+                  <img src="/img/theatre-sign.jpg" alt="Photo of the Los Angeles Theatre sign that says Congratulations Strange World">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="main-ticket-container grid-x">
+            <div class="ticket-left cell auto">
+              <div class="content">
+                <img src="/img/splat-scene4.jpg" alt="A photo of a installation of Disney's Strange World featuring Splat">
+              </div>
+            </div>
+            <div class="ticket-right cell shrink">
+              <div class="content">
+                <div class="text-container">
+                  <p>Wrap</p>
+                </div>
+                <div class="image-container">
+                  <img src="/img/strange-world-logo.png" alt="Disney's Strange World Logo">
+                </div>
+                <div class="text-container">
+                  <p>Party</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

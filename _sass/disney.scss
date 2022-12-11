@@ -47,5 +47,10 @@
     mask-size: 110%;
     mask-repeat: no-repeat;
     mask-position: -5rem, center;
+
+    -webkit-mask-image: url(/img/mickey-mask.svg);
+    -webkit-mask-size: 110%;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: -5rem, center;
   }
 }
