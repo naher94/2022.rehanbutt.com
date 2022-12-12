@@ -11,13 +11,6 @@ $movie-list-text-shadow: 0 0 10px $pure-black;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(6, 1fr);
     grid-gap: 10px;
-    // grid-template-areas: 
-    // "top-picks top-picks top-picks top-picks top-picks top-picks . . . . . .
-    // top-picks top-picks top-picks top-picks top-picks top-picks . . . . . .
-    // top-picks top-picks top-picks top-picks top-picks top-picks . . . . . .
-    // top-picks top-picks top-picks top-picks top-picks top-picks . . . . . .
-    // top-picks top-picks top-picks top-picks top-picks top-picks . . . . . .
-    // top-picks top-picks top-picks top-picks top-picks top-picks . . . . . .";
     padding: 2em;
     position: relative;
     overflow: hidden;
@@ -59,16 +52,13 @@ $movie-list-text-shadow: 0 0 10px $pure-black;
     .top-picks{
       grid-row: 1 / 7;
       grid-column: 1 / 7;
-      // grid-area: top-picks;
       display: grid;
       // subgrid not supported by Chrome
-      // grid-template-columns: subgrid;
       grid-template-columns: repeat(6, 1fr);
       grid-gap: 10px;
       .poster-container{
         grid-column: 1/4;
         grid-row: 1;
-        // margin-left: 5em;
         .poster-box{
           .poster{
             position: relative;
@@ -616,7 +606,6 @@ $movie-list-text-shadow: 0 0 10px $pure-black;
         }
         .poster{
           max-width: 4em;
-          // position: absolute;
           transform-origin: bottom left;
           transition: $run;
           img{
