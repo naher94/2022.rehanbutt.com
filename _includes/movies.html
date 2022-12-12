@@ -1,4 +1,4 @@
-{% assign movie-list = "Spider-Man No Way Home, Tenet, Strange World, Thor: Love and Thunder, Movie!!" | split: ',' %}
+{% assign movie-list = "Spider-Man No Way Home, No Time to Die, Strange World, Thor: Love and Thunder, Turning Red" | split: ',' %}
 <!-- TODO enter data -->
 
 <section class="movies">
@@ -26,7 +26,7 @@
           <div class="cell grid-x align-right poster-box">
             <div class="poster cell">
               <p>2</p>
-              <img src="/img/movie-spiderman.jpg" alt="Spider-Man No Way Home Poster">
+              <img src="/img/movie-no-time-to-die.jpg" alt="James Bond: No Time to Die Poster">
               {% capture name %}1{% endcapture %}
               {% include popcorn.svg %}
               {% capture name %}2{% endcapture %}
@@ -36,8 +36,10 @@
           <div class="cell poster-box">
             <div class="poster">
               <p>3</p>
-              <img src="/img/movie-spiderman.jpg" alt="Spider-Man No Way Home Poster">
+              <img src="/img/movie-strange-world.jpg" alt="Disney's Strange World Poster">
               {% capture name %}3{% endcapture %}
+              {% include popcorn.svg %}
+              {% capture name %}14{% endcapture %}
               {% include popcorn.svg %}
             </div>
           </div>
@@ -107,9 +109,9 @@
       <div class="total-watched">
         <div class="text-container">
           <p>watched</p>
-          <p class="number">161</p> 
+          <p class="number">120</p> 
           <p>featured films</p>
-          <p class="sub-description"><i class="fas fa-history"></i> 54% were rewatches</p>
+          <p class="sub-description"><i class="fas fa-history"></i> 49% were rewatches</p>
         </div>
         {% capture name %}6{% endcapture %}
         {% include popcorn.svg %}
@@ -118,16 +120,16 @@
       </div>
       <div class="busy-day">
         <div class="text-container">
-          <p>Sunday</p>
-          <p class="number">Nov 15th</p> 
-          <p>was the busiest watch day with 7 movies</p>
+          <p>Saturday</p>
+          <p class="number">Jun 18th</p> 
+          <p>was the busiest watch day with 6 movies</p>
         </div>
         <div class="average grid-x align-middle align-center">
           <div class="monthly grid-x align-middle align-center">
             {% capture name %}8{% endcapture %}
             {% include popcorn.svg %}
             <div class="popcorn-text-container cell shrink grid-x align-center align-middle">
-              <p class="number cell shrink">13</p>
+              <p class="number cell shrink">10</p>
               <p class="description cell small-4">monthly average</p>
             </div>
           </div>
@@ -135,19 +137,19 @@
             {% capture name %}9{% endcapture %}
             {% include popcorn.svg %}
             <div class="popcorn-text-container cell shrink grid-x align-center align-middle">
-              <p class="number cell shrink">6</p>
-              <p class="description cell small-5">daily average</p>
+              <p class="number cell shrink">4</p>
+              <p class="description cell small-5">weekly average</p>
             </div>
           </div>
         </div>
       </div>
       <div class="first-watch">
         <div class="text-container">
-          <p class="number">Tenet</p> 
+          <p class="number">Yesterday</p> 
           <p>1st watched</p>
         </div>
         <div class="poster">
-          <img src="/img/movie-tenet.jpg" alt="Tenet Poster">
+          <img src="/img/movie-yesterday.jpg" alt="Yesterday Poster">
         </div>
         {% capture name %}12{% endcapture %}
         {% include popcorn.svg %}

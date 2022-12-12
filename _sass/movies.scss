@@ -110,6 +110,16 @@ $movie-list-text-shadow: 0 0 10px $pure-black;
             width: 120%;
             transform: rotate(-20deg);
           }
+          #popcorn-14{
+            fill: $popcorn-yellow-1;
+            // bottom: -30%;
+            // right: -43%;
+            // transform: rotate(7deg) scale(0.5);
+            // TODO remove unused code
+            bottom: -26%;
+            right: -52%;
+            transform: rotate(20deg) scale(0.5);
+          }
         }
       }
       .poster{
@@ -474,7 +484,7 @@ $movie-list-text-shadow: 0 0 10px $pure-black;
         .daily{
           position: absolute;
           top: -2%;
-          right: 3%;
+          right: 0;
           transform: scale(0.40) rotate(5deg);
           transition: $run;
           #popcorn-9{
@@ -504,6 +514,7 @@ $movie-list-text-shadow: 0 0 10px $pure-black;
       font-size: 1.35em;
       position: relative;
       transform: rotate(-7deg);
+      margin-left: -.5em;
       &:hover{
         .poster{
           transform: rotate(-10deg);
