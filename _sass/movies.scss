@@ -265,6 +265,7 @@ $movie-list-text-shadow: 0 0 10px $pure-black;
         position: absolute;
         bottom: 0;
         z-index: 2;
+        transition: $jog;
         .ticket-left {
           display: inline-flex;
           background: #750046;
@@ -545,6 +546,20 @@ $movie-list-text-shadow: 0 0 10px $pure-black;
           border-radius: $tile-radius;
           box-shadow: $centered-shadow rgba($pure-black, 0.5);
         }
+      }
+      #popcorn-12{
+        position: absolute;
+        fill: $popcorn-yellow-3;
+        bottom: -150%;
+        right: -51%;
+        transform: scale(1.3) rotate(23deg);
+      }
+      #popcorn-13{
+        position: absolute;
+        fill: $popcorn-yellow-2;
+        bottom: -3%;
+        right: -10%;
+        transform: scale(0.3);
       }
     }
     .rewatch{
