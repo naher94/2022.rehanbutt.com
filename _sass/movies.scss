@@ -35,9 +35,26 @@ $movie-list-text-shadow: 0 0 10px $pure-black;
       }
     }
     .bucket-container{
-      position: absolute;
-      bottom: -12em;
-      right: -2em;
+      #popcorn-10{
+        fill: $popcorn-yellow-1;
+        position: absolute;
+        right: 1em;
+        bottom: 3em;
+        transform: scale(0.75) rotate(-25deg);
+      }
+      #popcorn-11{
+        fill: $popcorn-yellow-3;
+        position: absolute;
+        right: -3em;
+        bottom: 3em;
+        transform: scale(0.6) rotate(10deg);
+      }
+      img{
+        position: absolute;
+        bottom: -12em;
+        right: -2em;
+        z-index: 3;
+      }
     }
     .top-picks{
       grid-row: 1 / 7;
