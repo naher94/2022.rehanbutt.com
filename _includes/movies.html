@@ -118,11 +118,21 @@
           <p>was the busiest watch day with 7 movies</p>
         </div>
         <div class="average grid-x align-middle align-center">
-          {% capture name %}8{% endcapture %}
-          {% include popcorn.svg %}
-          <div class="popcorn-text-container cell shrink grid-x align-center align-middle">
-            <p class="number cell shrink">13</p>
-            <p class="description cell small-4">monthly average</p>
+          <div class="monthly grid-x align-middle align-center">
+            {% capture name %}8{% endcapture %}
+            {% include popcorn.svg %}
+            <div class="popcorn-text-container cell shrink grid-x align-center align-middle">
+              <p class="number cell shrink">13</p>
+              <p class="description cell small-4">monthly average</p>
+            </div>
+          </div>
+          <div class="daily grid-x align-middle align-center">
+            {% capture name %}9{% endcapture %}
+            {% include popcorn.svg %}
+            <div class="popcorn-text-container cell shrink grid-x align-center align-middle">
+              <p class="number cell shrink">6</p>
+              <p class="description cell small-5">daily average</p>
+            </div>
           </div>
         </div>
       </div>

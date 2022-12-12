@@ -423,13 +423,25 @@ $movie-list-text-shadow: 0 0 10px $pure-black;
         font-size: 2em;
       }
       .average{
-        position: absolute;
-        top: -11%;
-        right: 23%;
-        transform: scale(0.5) rotate(-10deg);
-        #popcorn-8{
-          fill: $popcorn-yellow-1;
+        .monthly{
           position: absolute;
+          top: -11%;
+          right: 23%;
+          transform: scale(0.5) rotate(-10deg);
+          #popcorn-8{
+            fill: $popcorn-yellow-1;
+            position: absolute;
+          }
+        }
+        .daily{
+          position: absolute;
+          top: -2%;
+          right: 3%;
+          transform: scale(0.40) rotate(5deg);
+          #popcorn-9{
+            fill: $popcorn-yellow-2;
+            position: absolute;
+          }
         }
         .popcorn-text-container{
           z-index: 2;
