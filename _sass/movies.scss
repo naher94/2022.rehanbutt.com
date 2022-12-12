@@ -358,6 +358,16 @@ $movie-list-text-shadow: 0 0 10px $pure-black;
       font-size: 1.35em;
       position: relative;
       transform: rotate(-10deg);
+      &:hover{
+        #popcorn-6{
+          transform: rotate(360deg);
+          transition: $jog;
+        }
+        #popcorn-7{
+          transform: rotate(-360deg);
+          transition: $jog;
+        }
+      }
       .text-container{
         position: relative;
         z-index: 2;
@@ -378,6 +388,9 @@ $movie-list-text-shadow: 0 0 10px $pure-black;
         font-weight: $zilla-light;
         font-size: 0.75em;
         color: #4d4d4d;
+        i{
+          font-size: 0.6em;
+        }
       }
       #popcorn-6{
         fill: $popcorn-yellow-2;
@@ -405,6 +418,22 @@ $movie-list-text-shadow: 0 0 10px $pure-black;
       .text-container{
         position: relative;
         z-index: 2;
+        &:hover +{
+          .average{
+            .monthly{
+              // push away by another 5%
+              top: -16%;
+              right: 28%;
+              // 20% scale up
+              transform: scale(0.7) rotate(-10deg);
+            }
+            .daily{
+              top: -2%;
+              right: -5%;
+              transform: scale(0.6) rotate(5deg);
+            }
+          }
+        }
         p{
           &:last-of-type{
             width: 75%;
@@ -428,6 +457,7 @@ $movie-list-text-shadow: 0 0 10px $pure-black;
           top: -11%;
           right: 23%;
           transform: scale(0.5) rotate(-10deg);
+          transition: $run;
           #popcorn-8{
             fill: $popcorn-yellow-1;
             position: absolute;
@@ -438,6 +468,7 @@ $movie-list-text-shadow: 0 0 10px $pure-black;
           top: -2%;
           right: 3%;
           transform: scale(0.40) rotate(5deg);
+          transition: $run;
           #popcorn-9{
             fill: $popcorn-yellow-2;
             position: absolute;
@@ -465,6 +496,11 @@ $movie-list-text-shadow: 0 0 10px $pure-black;
       font-size: 1.35em;
       position: relative;
       transform: rotate(-7deg);
+      &:hover{
+        .poster{
+          transform: rotate(-10deg);
+        }
+      }
       .text-container{
         position: relative;
         z-index: 2;
@@ -483,9 +519,11 @@ $movie-list-text-shadow: 0 0 10px $pure-black;
       .poster{
         max-width: 3em;
         position: absolute;
-        left: -30%;
-        top: -20%;
+        left: -36%;
+        top: -12%;
+        transform-origin: bottom right;
         transform: rotate(10deg);
+        transition: $run;
         img{
           border-radius: $tile-radius;
           box-shadow: $centered-shadow rgba($pure-black, 0.5);
@@ -515,6 +553,15 @@ $movie-list-text-shadow: 0 0 10px $pure-black;
       .text-container{
         position: relative;
         z-index: 2;
+        p{
+          &:first-of-type{
+            i{
+              font-size: 0.6em;
+              margin-right: 0.25em;
+              margin-top: 0.1em;
+            }
+          }
+        }
       }
       p{
         font-family: $big-shoulders;
