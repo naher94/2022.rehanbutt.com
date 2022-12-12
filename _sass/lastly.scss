@@ -17,12 +17,24 @@
     color: $navy-black;
     border: none;
     .color-field{
-      background: radial-gradient(circle at 0 0, #66FFF6, #A965FF);
+      background: radial-gradient(circle at 0 0, #BC2649, #8D1934);
       padding: 3em;
       border-radius: abs(toRem($tile-radius-big)-$card-padding);
       @include breakpoint(small only){
         border-radius: abs(toRem($tile-radius-big)-$card-padding-mobile);
       }
+    }
+    h2{
+      font-family: $big-shoulders;
+      font-weight: $big-shoulders-black;
+      font-size: 5em;
+      color: $pure-white;
+    }
+    h3{
+      font-family: $lato;
+      line-height: 1.2;
+      font-size: 2em;
+      color: $pure-white;
     }
     .polaroid-chin{
       padding-top: $card-padding;
