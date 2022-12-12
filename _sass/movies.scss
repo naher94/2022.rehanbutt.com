@@ -36,7 +36,7 @@ $movie-list-text-shadow: 0 0 10px $pure-black;
     }
     .bucket-container{
       position: absolute;
-      bottom: -9em;
+      bottom: -12em;
       right: -2em;
     }
     .top-picks{
@@ -394,6 +394,163 @@ $movie-list-text-shadow: 0 0 10px $pure-black;
         transform: rotate(25deg);
         top: -15%;
         left: 37%;
+      }
+    }
+    .busy-day{
+      grid-column: 7 / 10;
+      grid-row: 3 / 5;
+      font-size: 1.35em;
+      position: relative;
+      transform: rotate(10deg);
+      .text-container{
+        position: relative;
+        z-index: 2;
+        p{
+          &:last-of-type{
+            width: 75%;
+          }
+        }
+      }
+      p{
+        font-family: $big-shoulders;
+        margin: 0;
+        padding: 0;
+        line-height: 1;
+        text-shadow: $movie-list-text-shadow;
+      }
+      .number{
+        font-weight: $big-shoulders-black;
+        font-size: 2em;
+      }
+      .average{
+        position: absolute;
+        top: -11%;
+        right: 23%;
+        transform: scale(0.5) rotate(-10deg);
+        #popcorn-8{
+          fill: $popcorn-yellow-1;
+          position: absolute;
+        }
+        .popcorn-text-container{
+          z-index: 2;
+          color: $pure-black;
+          p{
+            text-shadow: none;
+          }
+          .number{
+            display: inline;
+            padding-right: 0.05em;
+          }
+          .description{
+            margin-bottom: 0.1em;
+          }
+        }
+      }
+    }
+    .first-watch{
+      grid-column: 11 / 13;
+      grid-row: 2 / 3;
+      font-size: 1.35em;
+      position: relative;
+      transform: rotate(-7deg);
+      .text-container{
+        position: relative;
+        z-index: 2;
+      }
+      p{
+        font-family: $big-shoulders;
+        margin: 0;
+        padding: 0;
+        line-height: 1;
+        text-shadow: $movie-list-text-shadow;
+      }
+      .number{
+        font-weight: $big-shoulders-black;
+        font-size: 2em;
+      }
+      .poster{
+        max-width: 3em;
+        position: absolute;
+        left: -30%;
+        top: -20%;
+        transform: rotate(10deg);
+        img{
+          border-radius: $tile-radius;
+          box-shadow: $centered-shadow rgba($pure-black, 0.5);
+        }
+      }
+    }
+    .rewatch{
+      grid-column: 10 / 13;
+      grid-row: 4 / 6;
+      font-size: 1.35em;
+      position: relative;
+      transform: rotate(-8deg);
+      &:hover{
+        .poster-stack{
+          .poster-hold{
+            .poster{
+              &:nth-of-type(1){
+                transform: rotate(24deg);
+              }
+              &:nth-of-type(2){
+                transform: rotate(12deg);
+              }
+            }
+          }
+        }
+      }
+      .text-container{
+        position: relative;
+        z-index: 2;
+      }
+      p{
+        font-family: $big-shoulders;
+        margin: 0;
+        padding: 0;
+        line-height: 1;
+        text-shadow: $movie-list-text-shadow;
+      }
+      .number{
+        font-weight: $big-shoulders-black;
+        font-size: 2em;
+      }
+      .poster-stack{
+        position: absolute;
+        right: 10%;
+        top: -15%;
+        transform: rotate(10deg);
+        .poster-hold{
+          position: relative;
+        }
+        .poster{
+          max-width: 4em;
+          // position: absolute;
+          transform-origin: bottom left;
+          transition: $run;
+          img{
+            border-radius: $tile-radius;
+            box-shadow: $centered-shadow rgba($pure-black, 0.5);
+          }
+          //bottom of the stack
+          &:nth-of-type(1){
+            transform-origin: bottom left;
+            top: 0;
+            transform: rotate(16deg);
+          }
+          &:nth-of-type(2){
+            position: absolute;
+            transform-origin: bottom left;
+            top: 0;
+            transform: rotate(8deg);
+          }
+          //top one in the stack
+          &:nth-of-type(3){
+            position: absolute;
+            transform-origin: bottom left;
+            top: 0;
+          }
+        }
       }
     }
   }
