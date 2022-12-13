@@ -1,6 +1,9 @@
 .disney{
   margin-top: 2rem;
   color: $pure-white;
+  @include breakpoint(small only) {
+    margin-top: 1rem;
+  }
   .content-area{
     background: linear-gradient(to bottom right, #21195B 0%, #73467F 100%);
     border-radius: $tile-radius-medium;
@@ -23,6 +26,9 @@
       padding-right: 4rem;
       padding-top: 4rem;
       padding-bottom: 4rem;
+      @include breakpoint(small only) {
+        padding: 1.5rem;
+      }
       p{
         padding: 0;
         margin: 0;
@@ -30,6 +36,14 @@
       .logo-container{
         text-align: center;
         margin-bottom: 2rem;
+        @include breakpoint(small only) {
+          text-align: center;
+          // TODO hide the logo?
+          // display: none;
+          img{
+            width: 50%;
+          }
+        }
       }
     }
   }
@@ -52,5 +66,19 @@
     -webkit-mask-size: 110%;
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-position: -5rem, center;
+    @include breakpoint(small only) {
+      margin-top: -5em;
+      aspect-ratio: 3/4;
+      width: 100%;
+      background-size: 130%;
+
+      mask-size: 130%;
+      mask-repeat: no-repeat;
+      mask-position: -5.5rem, center;
+
+      -webkit-mask-size: 130%;
+      -webkit-mask-repeat: no-repeat;
+      -webkit-mask-position: -5.5rem, center;
+    }
   }
 }
