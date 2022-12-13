@@ -50,9 +50,11 @@
   }
   .song-container{
     font-size: 0.8em;
-    .album-cover{
-      aspect-ratio: 1/1; //TODO not working
+    .album-cover-wrapper{
       max-width: 7em;
+      .album-cover{
+        aspect-ratio: 1/1;
+      }
     }
     .song-tile{
       padding: 0.5rem 0;
