@@ -26,6 +26,16 @@ $movie-list-text-shadow: 0 0 10px $pure-black;
         line-height: 1;
         font-size: 2.5em;
       }
+      .date-wrapper{
+        padding-top: 0.15em;
+        padding-right: 0.25em;
+      }
+      span{
+        text-transform: uppercase;
+        color: #4d4d4d;
+        line-height: 1;
+        text-align: right;
+      }
     }
     .bucket-container{
       #popcorn-10{
