@@ -1,12 +1,18 @@
 .leveled-up{
   overflow: hidden;
   margin-top: 2rem;
+  @include breakpoint(small only) {
+    margin-top: 1rem;
+  }
   .skills-card{
     border-radius: $tile-radius-medium;
     position: relative;
     overflow: hidden;
     padding: 2em 2em 0 2em;
     box-shadow: inset 0px 0px 0px 5px rgba($pure-black, 0.1);
+    @include breakpoint(small only) {
+      padding: 1em 1em 0 1em;
+    }
     &::before{
       content: "";
       position: absolute;
@@ -20,6 +26,12 @@
       background-size: contain;
       background-repeat: no-repeat;
       transform: rotate(190deg);
+      @include breakpoint(small only) {
+        width: 250%;
+        bottom: -40%;
+        left: -50%;
+        transform: rotate(105deg);
+      }
     }
     &::after{
       content: "";
@@ -34,11 +46,22 @@
       background-size: contain;
       background-repeat: no-repeat;
       transform: rotate(55deg);
+      @include breakpoint(small only) {
+        width: 220%;
+        top: -30%;
+        left: -105%;
+        right: 0;
+        transform: scaleX(-1) rotate(90deg);
+      }
     }
   }
   .pill-container{
     text-align: center;
     margin-bottom: 2em;
+    @include breakpoint(small only) {
+      justify-content: unset;
+      margin-bottom: 2em;
+    }
     .pill{
       font-size: 1em;
       color: $navy-black;
@@ -50,6 +73,9 @@
       margin: 0.3em 0.25em;
       -webkit-backdrop-filter: blur(10px);
       backdrop-filter: blur(10px);
+      @include breakpoint(small only) {
+        font-size: 0.8em;
+      }
     }
   }
   .text-container{
@@ -61,6 +87,9 @@
       font-size: 10em;
       margin-bottom: 0;
       line-height: 0.7;
+      @include breakpoint(small only) {
+        font-size: 7em;
+      }
     }
     p{
       font-family: $lato;
@@ -70,6 +99,9 @@
       padding: 0;
       line-height: 1.2;
       margin-bottom: 1em;
+      @include breakpoint(small only) {
+        font-size: 1em;
+      }
     }
   }
 }
