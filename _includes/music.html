@@ -9,7 +9,9 @@
         {% assign songs_order = site.songs | sort: 'play-count' | reverse %}
           {%- for song in songs_order -%}
           {% capture song-card %}
-            <img src="img/{{song.album-cover}}" alt="Dance Dance Dance Album Cover" class="album-cover">
+            <div class="album-cover-wrapper cell shrink">
+              <img src="img/{{song.album-cover}}" alt="Dance Dance Dance Album Cover" class="album-cover">
+            </div>
             <div class="text-container cell auto grid-x">
               <div class="cell grid-x align-middle">
                 <div class="cell auto grid-x">

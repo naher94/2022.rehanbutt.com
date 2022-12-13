@@ -155,10 +155,6 @@ $movie-list-text-shadow: 0 0 10px $pure-black;
           }
           #popcorn-14{
             fill: $popcorn-yellow-1;
-            // bottom: -30%;
-            // right: -43%;
-            // transform: rotate(7deg) scale(0.5);
-            // TODO remove unused code
             bottom: -26%;
             right: -52%;
             transform: rotate(20deg) scale(0.5);
@@ -352,19 +348,6 @@ $movie-list-text-shadow: 0 0 10px $pure-black;
               padding: 0;
               text-transform: uppercase;
               font-weight: $big-shoulders-bold;
-            }
-            .left{
-              border-right: solid 0.25em;
-              .cell{
-                width: 150%;
-                //TODO this feels like a hack
-              }
-              p{
-                transform: rotate(-90deg);
-                line-height: 1;
-                margin-top: 0.1em;
-                margin-left: 0.15em;
-              }
             }
           }
         }
