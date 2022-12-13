@@ -1,8 +1,14 @@
 .hero{
   margin-top: 2rem;
+  @include breakpoint(small only) {
+    margin-top: 1rem;
+  }
   .content-area{
     border-radius: $tile-radius-medium;
     padding: 3rem;
+    @include breakpoint(small only) {
+      padding: 1rem;
+    }
     background: radial-gradient(circle at bottom left, #DAF5FF 0%, #F7F0FF 100%);
   }
   .hero-text{
@@ -10,11 +16,11 @@
     padding-left: 0;
     padding-right: 0;
     margin: 0;
-    @include breakpoint(medium down){
-      padding-left: 1em;
-      padding-right: 1em;
-      font-size: 1.5em;
-    }
+    // @include breakpoint(medium down){
+    //   padding-left: 1em;
+    //   padding-right: 1em;
+    //   font-size: 1.5em;
+    // }
   }
   .emoji-section{
     span:not(:last-of-type){
