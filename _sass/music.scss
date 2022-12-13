@@ -1,10 +1,15 @@
 .music{
   margin-top: 2rem;
+  @include breakpoint(small only) {
+    margin-top: 1rem;
+  }
   .music-container{
     background-color: rgba($navy-black, .1);
     border-radius: $tile-radius-medium;
     padding: 2rem;
-    // padding-top: 3rem;
+    @include breakpoint(small only) {
+      padding: 1rem;
+    }
   }
   h2{
     font-family: $montserrat;
@@ -12,16 +17,19 @@
     font-size: 5rem;
     line-height: 4rem;
     margin-top: 0.1em;
+    @include breakpoint(small only) {
+      font-size: 3rem;
+      line-height: 3rem;
+      margin-top: 0.25em;
+    }
     .hrs{
       font-weight: $montserrat-light;
     }
     .description{
       font-size: 3rem;
       display: block;
-      @include breakpoint(medium down) {
-        // font-size: 12vw;
-        line-height: 0.8em;
-        margin-top: 0.2em;
+      @include breakpoint(small only) {
+        font-size: 1.5rem;
       }
     }
   }
@@ -34,8 +42,8 @@
     line-height: 1;
     @include breakpoint(small only) {
       text-align: left;
-      margin-top: 1em;
-      margin-bottom: 2em;
+      margin-top: 0.5em;
+      margin-bottom: 1.5em;
       padding-left: 0.5rem;
       padding-right: 0.5rem;
     }
@@ -88,13 +96,10 @@
           }
           .artist{
             font-weight: $montserrat-bold;
-            // display: inline-block;
             line-height: 1.2;
           }
           .play-count{
             font-weight: $montserrat-regular;
-            // display: inline-block;
-            // float: right;
           }
         }
       }
