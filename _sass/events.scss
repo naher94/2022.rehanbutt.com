@@ -1,6 +1,9 @@
 .events{
   color: $pure-white;
   margin-top: 2rem;
+  @include breakpoint(small only) {
+    margin-top: 1rem;
+  }
   .content-area{
     background-color: #0789FF;
     border-radius: $tile-radius-medium;
@@ -10,6 +13,12 @@
     padding-right: 3rem;
     padding-top: 5rem;
     padding-bottom: 5rem;
+    @include breakpoint(small only) {
+      padding-left: 1rem;
+      padding-right: 1rem;
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+    }
   }
   h2{
     text-align: center;
@@ -17,6 +26,9 @@
     font-weight: $lato-black;
     font-size: 4rem;
     line-height: 1.2;
+    @include breakpoint(small only) {
+      font-size: 2rem;
+    }
   }
   p{
     text-align: center;
@@ -26,6 +38,9 @@
     margin: 0;
     padding: 0;
     color: rgba($pure-white, .70);
+    @include breakpoint(small only) {
+      font-size: 1rem;
+    }
   }
   @mixin white-gradient {
     background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
@@ -36,39 +51,40 @@
   // Animation
   @keyframes scroll {
     0% { transform: translateX(0); }
-    100% { transform: translateX(-2000px)} //TODO 7 is the number of logos
+    100% { transform: translateX(-2000px)} //7 is the number of logos
   }
   .logo-slider {
-    // height: 200px;
     padding-bottom: 4rem;
     overflow:hidden;
     position: relative;
     background-color: initial;
-    // background-color: lavender;
+    @include breakpoint(small only) {
+      padding-bottom: 2rem;
+    }
     
     .slide-track {
-      animation: scroll $animationSpeed linear infinite; //TODO UNDO THIS LATER
+      animation: scroll $animationSpeed linear infinite;
       display: flex;
-      // width: calc(250px * 14); //TODO 14 number of logos x2
       width: 4000px;
     }
     .slide{
       margin: 0 2rem;
       min-width: 60px;
+      @include breakpoint(small only) {
+        margin: 0 1rem;
+      }
       img{
         height: 120px;
+        @include breakpoint(small only) {
+          height: 80px;
+        }
       }
     }
-    // .slide {
-    //   height: 100px;
-    //   width: 250px;
-    // }
   }
   .logo-container{
     z-index: 1;
     position: relative;
     .cell{
-      // padding: 1rem;
       img{
         max-width: 300px;
         @media (prefers-color-scheme: dark){
