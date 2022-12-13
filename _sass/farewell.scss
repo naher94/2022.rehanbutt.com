@@ -75,7 +75,7 @@
     }
     .chocolate-wrapper{
       border-radius: $tile-radius-medium 0 0 $tile-radius-medium;
-      // background-color: #FBBC17;
+      background-color: #FBBC17;
       background: url(../img/chocolate-wrapper.jpg);
       background-size: cover;
       position: relative;
@@ -134,11 +134,6 @@
           width: 3em;
           text-align: center;
         }
-        .win-list{
-          .win-words{
-            // font-size: 0.8em;
-          }
-        }
       }
       .bar-footer{
         font-family: $big-shoulders;
@@ -149,13 +144,8 @@
         backdrop-filter: blur(10px);
         font-weight: $big-shoulders-black;
         .details{
-          // text-transform: uppercase;
           font-weight: $big-shoulders-regular;
           margin-inline-start: 0.25em;
-          .edition{
-            // font-weight: $big-shoulders-black;
-            // margin-inline-start: 0.5em;
-          }
         }
       }
     }
