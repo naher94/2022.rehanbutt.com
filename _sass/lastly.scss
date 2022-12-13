@@ -1,10 +1,10 @@
 .lastly{
   margin-top: 2rem;
   @include breakpoint(small only){
+    margin-top: 1rem;
     font-size: 0.5em;
   }
   .card{
-    // background: semantic-color(lastly-card-bg);
     background-color: #F3F3F3;
     border-radius: $tile-radius-big;
     margin-bottom: 0;
@@ -21,7 +21,7 @@
       padding: 3em;
       border-radius: abs(toRem($tile-radius-big)-$card-padding);
       @include breakpoint(small only){
-        border-radius: abs(toRem($tile-radius-big)-$card-padding-mobile);
+        border-radius: 1rem;
       }
     }
     h2{
@@ -29,6 +29,10 @@
       font-weight: $big-shoulders-black;
       font-size: 5em;
       color: $pure-white;
+      @include breakpoint(small only){
+        line-height: 1;
+        padding: 0;
+      }
     }
     h3{
       font-family: $lato;
@@ -38,9 +42,19 @@
     }
     .polaroid-chin{
       padding-top: $card-padding;
+      @include breakpoint(small only){
+        padding-top: $card-padding-mobile;
+        padding-left: 0.25rem;
+        padding-right: 0.25rem;
+        padding-bottom: 0;
+      }
       .hidden-mickey{
         font-family: $lato;
         font-size: 1.5rem;
+        @include breakpoint(small only){
+          // font-size: 1.3rem;
+          font-size: 1rem;
+        }
         .question{
           font-weight: $lato-bold;
         }
@@ -55,6 +69,11 @@
     .share-area{
       font-family: $zilla;
       color: semantic-color(text);
+      @include breakpoint(small only){
+        font-size: 1rem;
+        margin-top: 1em;
+        justify-content: space-between;
+      }
       .words{
         margin-inline-end: 0.5rem;
       }
