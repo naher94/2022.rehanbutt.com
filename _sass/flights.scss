@@ -1,6 +1,9 @@
 .flights{
   color: $pure-white;
   margin-top: 2rem;
+  @include breakpoint(small only) {
+    margin-top: 1rem;
+  }
   .content-area{
     border-radius: $tile-radius-medium;
     background: $pure-black;
@@ -14,6 +17,10 @@
         font-size: 2rem;
         text-transform: uppercase;
         margin-bottom: 0;
+        @include breakpoint(small only) {
+          font-size: 1.5rem;
+          padding-left: 0.25em;
+        }
       }
     }
     .data-area{
@@ -21,18 +28,27 @@
       border-radius: 10px;
       position: relative;
       overflow: hidden;
+      @include breakpoint(small only) {
+        div{
+          z-index: 1;
+        }
+      }
       &::before{
         content: "";
         background-image: url(/img/planet.png);
         background-repeat: no-repeat;
-        // background-position: -18rem center;
         background-position: -30rem center;
         background-size: 100%;
         position: absolute;
-        top: 0px;
-        right: 0px;
-        bottom: 0px;
-        left: 0px;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        @include breakpoint(small only) {
+          background-position: -25rem center;
+          background-size: 200%;
+          opacity: 0.5;
+        }
       }
       p{
         padding: 0;
