@@ -6,7 +6,7 @@
   }
   .card{
     background-color: #F3F3F3;
-    border-radius: $tile-radius-big;
+    border-radius: $tile-radius-medium;
     margin-bottom: 0;
     $card-padding: 2rem;
     $card-padding-mobile: 1rem;
@@ -19,9 +19,11 @@
     .color-field{
       background: radial-gradient(circle at 0 0, #BC2649, #8D1934);
       padding: 3em;
-      border-radius: abs(toRem($tile-radius-big)-$card-padding);
+      // border-radius: abs(toRem($tile-radius-medium)-$card-padding);
+      border-radius: 10px;
       @include breakpoint(small only){
-        border-radius: 1rem;
+        // border-radius: abs(toRem($tile-radius-medium)-$card-padding-mobile);
+        border-radius: 0.5rem;
       }
     }
     h2{
