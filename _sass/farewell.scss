@@ -115,9 +115,12 @@
           }
         }
         p{
-          font-size: 1.25em;
+          // font-size: 1.25em;
           padding: 0;
           margin: 0;
+        }
+        .friends{
+          cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='50' height='60' viewport='0 0 100 100' style='fill:black;font-size:30px;'><text y='50%'>😸</text></svg>") 16 0,auto;
         }
       }
       .big-wins{
@@ -133,6 +136,9 @@
           border: 2px solid rgba($pure-black,0.075);
           width: 3em;
           text-align: center;
+        }
+        .win-words{
+          font-size: 0.8em;
         }
       }
       .bar-footer{
