@@ -149,11 +149,12 @@
         backdrop-filter: blur(10px);
         font-weight: $big-shoulders-black;
         .details{
-          text-transform: uppercase;
+          // text-transform: uppercase;
           font-weight: $big-shoulders-regular;
+          margin-inline-start: 0.25em;
           .edition{
-            font-weight: $big-shoulders-black;
-            margin-inline-start: 0.5em;
+            // font-weight: $big-shoulders-black;
+            // margin-inline-start: 0.5em;
           }
         }
       }
