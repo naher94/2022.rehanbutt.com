@@ -1,14 +1,23 @@
 .website{
   margin-top: 2rem;
+  @include breakpoint(small only) {
+    margin-top: 1rem;
+  }
   .website-wrapper{
     background-color: semantic-color(joined-card-bg);
     border-radius: $tile-radius-medium;
     padding: 2rem;
+    @include breakpoint(small only) {
+      padding: 1rem;
+    }
   }
   .website-content{
     .header-section{
       .mac-buttons{
         margin-inline-end: 1rem;
+        @include breakpoint(small only) {
+          margin-inline-end: 0.5rem;
+        }
         div{
           border-radius: $pill-radius;
           border: 1px solid rgba($pure-black, 0.1);
@@ -61,8 +70,15 @@
       margin-block-start: 1rem;
       color: #78345C;
       padding: 2em;
+      @include breakpoint(small only) {
+        padding: 1em;
+      }
       .text-area{
         padding-right: 2em;
+        @include breakpoint(small only) {
+          padding-right: 0;
+          margin-bottom: 2em;
+        }
         p{
           margin-bottom: 1em;
         }
@@ -81,10 +97,18 @@
       }
       .fig{
         width: 5em;
+        @include breakpoint(small only) {
+          width: 4em;
+        }
       }
       h2{
         font-family: $big-shoulders;
         font-weight: $big-shoulders-bold;
+        @include breakpoint(small only) {
+          font-size: 2em;
+          padding: 0;
+          margin-top: 0.25em;
+        }
       }
       p{
         padding: 0;
@@ -101,7 +125,8 @@
         overflow: hidden;
         margin: 0.25em;
         @include breakpoint(small only) {
-          font-size: 1.5em;
+          font-size: 1em;
+          padding: 0.5em;
         }
         p{
           padding: 0;
@@ -113,6 +138,9 @@
           font-size: 1.5em;
           line-height: normal;
           position: relative;
+          @include breakpoint(small only) {
+            font-size: 1em;
+          }
         }
         .sub-header{
           text-transform: uppercase;
