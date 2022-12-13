@@ -76,22 +76,16 @@ body, html {
     }
   }
   &.rewatch{
-    background: linear-gradient(180deg,#D10000,#480000);
   }
   &.infinity-saga{
-    background: linear-gradient(-45deg,rgba(#12131F,0.8),rgba(#2C1141,0.8),rgba(#04055D,0.8));
   }
   &.first-watched{
-    background: linear-gradient(180deg,#090F1B,#0F3774);
   }
   &.busy-day{
-    background: linear-gradient(180deg,#3F0707,#3B0030);
   }
   &.day-week{
-    background: linear-gradient(180deg,#00BF8F,#113F4F);
   }
   &.end-card{
-    background:radial-gradient(#BF5218,#580510);
   }
 }
 
