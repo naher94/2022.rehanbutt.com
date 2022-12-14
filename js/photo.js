@@ -1,3 +1,7 @@
+$('.window-shade').on('click', function(){
+	$(this).toggleClass('closed');
+});
+
 $(function () {
 
   // Define window variables

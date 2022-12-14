@@ -6,7 +6,7 @@
           <div class="horizontal-scroll-section__content-section">
           </div>
           <div class="horizontal-scroll-section__content-section departing">
-            <div class="film now-departing grid-x cell align-middle">
+            <div class="slide-panel now-departing grid-x cell align-middle">
               <div class="grid-x cell align-center">
                 <div class="cell title-text">
                   <i class="fas fa-plane-departure"></i>
@@ -37,37 +37,59 @@
               </div>
             </div>
           </div>
+          <!-- title,city,country,class name or inject aspect ratio,image file, alt text -->
+          {% assign photo-list = "(Airport Security|Doha|Qatar|1/1|airport-security.jpg|A photo of a black and yellow checkered SUV on the tarmac of an airport)" | remove: "(" | remove: ")" | split: ',' %}
+          {% for item in photo-list %}
+          {% assign each = item | split: '|' %}
           <div class="horizontal-scroll-section__content-section">
-            <div class="film rewatch grid-x cell align-center align-middle">
-              <div class="cell shrink">
-                .rewatch cell
+            <div class="slide-panel plane-window grid-x cell align-center align-middle">
+              <div class="window-shade grid-x align-middle align-center">
+                <div class="cell">
+                  <p class="photo-title">{{each[0]}}</p>
+                  <p class="photo-location">{{each[1]}}, {{each[2]}}</p>
+                </div>
+              </div>
+              <div class="window-glass" style="aspect-ratio: {{each[3]}};">
+                <img src="/img/photos/{{each[4]}}" alt="{{each[5]}}">
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+
+          <div class="horizontal-scroll-section__content-section">
+            <div class="slide-panel plane-window grid-x cell align-center align-middle">
+              <div class="window-shade">
+                content on the shade
+              </div>
+              <div class="window-glass">
+                <img src="/img/atthehat.jpg" alt="">
               </div>
             </div>
           </div>
           <div class="horizontal-scroll-section__content-section">
-            <div class="film infinity-saga grid-x align-middle align-center">
+            <div class="slide-panel infinity-saga grid-x align-middle align-center">
               <div class="cell grid-x align-center">
                 .infinity-saga cell
               </div>
             </div>
           </div>
           <div class="horizontal-scroll-section__content-section">
-            <div class="film first-watched grid-x">
+            <div class="slide-panel first-watched grid-x">
               .first-watched cell
             </div>
           </div>
           <div class="horizontal-scroll-section__content-section">
-            <div class="film grid-x busy-day">
+            <div class="slide-panel grid-x busy-day">
               .busy-day cell
             </div>
           </div>
           <div class="horizontal-scroll-section__content-section">
-            <div class="film grid-y day-week">
+            <div class="slide-panel grid-y day-week">
               .day-week cell
             </div>
           </div>
           <div class="horizontal-scroll-section__content-section">
-            <div class="film end-card grid-x align-middle align-center">
+            <div class="slide-panel end-card grid-x align-middle align-center">
               .end-card cell
             </div>
           </div>
