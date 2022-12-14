@@ -22,7 +22,7 @@ $windowBorder: 20px;
   .window-shade{
     position: absolute;
     left: 0;
-    top: -90%;
+    top: -92%;
     width: 100%;
     height: 100%;
     padding: 2rem;
@@ -87,7 +87,7 @@ $windowBorder: 20px;
   @include breakpoint(small only){
     font-size: 80%;
   }
-  &.now-departing{
+  &.now-departing, &.now-arriving{
     background-color: unset;
     padding: 0;
     .title-text{
@@ -126,18 +126,6 @@ $windowBorder: 20px;
         }
       }
     }
-  }
-  &.rewatch{
-  }
-  &.infinity-saga{
-  }
-  &.first-watched{
-  }
-  &.busy-day{
-  }
-  &.day-week{
-  }
-  &.end-card{
   }
 }
 
@@ -185,7 +173,7 @@ $windowBorder: 20px;
       border-radius: 50px;
       margin-right: 1rem;
       margin-left: 1rem;
-      &:first-of-type{
+      &:first-of-type, &:last-of-type{
         min-width: 20rem;
         background: none;
         border: none;
@@ -208,7 +196,7 @@ $windowBorder: 20px;
   }
 }
 
-.departing{
+.departing, .arriving{
   background-color: #232323;
   color: #E0C200;
   border: none;
