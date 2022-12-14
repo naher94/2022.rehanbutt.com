@@ -67,8 +67,12 @@
             <div class="slide-panel plane-window grid-x cell align-center align-middle">
               <div class="window-shade grid-x align-middle align-center">
                 <div class="cell">
-                  <!-- if 3rd loop add hidden mickey? -->
-                  <p class="photo-title">{{each[0]}}</p>
+                  {%- assign isDisney = each[0] | strip -%}
+                  {%- if isDisney == "Epcot" -%}
+                    {% capture location %}epcot{% endcapture %}
+                    {% include mickey.svg %}
+                  {%- endif -%}
+                  <p class="photo-title">{{each[0] | strip}}</p>
                   <p class="photo-location">{{each[1]}}, {{each[2]}}</p>
                 </div>
               </div>
