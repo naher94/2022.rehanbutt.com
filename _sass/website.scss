@@ -41,12 +41,18 @@
         border-radius: $tile-radius;
         padding: 0.5em 1em;
         font-size: 0.8em;
+        @media (prefers-color-scheme: dark) {
+          background-color: $navy-black;
+        }
         .fa-lock{
           margin-inline-end: 0.5em;
         }
         a{
           font-weight: $lato-bold;
           color: $navy-black;
+          @media (prefers-color-scheme: dark) {
+            color: $pure-white;
+          }
         }
         .mickey-container{
           margin-inline-end: 0.5em;
@@ -70,6 +76,9 @@
       margin-block-start: 1rem;
       color: #78345C;
       padding: 2em;
+      @media (prefers-color-scheme: dark) {
+        background-color: $navy-black;
+      }
       @include breakpoint(small only) {
         padding: 1em;
       }
