@@ -32,6 +32,9 @@
         left: -50%;
         transform: rotate(105deg);
       }
+      @media (prefers-color-scheme: dark) {
+        filter: brightness(.7);
+      }
     }
     &::after{
       content: "";
@@ -52,6 +55,9 @@
         left: -105%;
         right: 0;
         transform: scaleX(-1) rotate(90deg);
+      }
+      @media (prefers-color-scheme: dark) {
+        filter: brightness(.7);
       }
     }
   }
@@ -75,6 +81,10 @@
       backdrop-filter: blur(10px);
       @include breakpoint(small only) {
         font-size: 0.8em;
+      }
+      @media (prefers-color-scheme: dark) {
+        color: $pure-white;
+        background-color: rgba($navy-black-d3, 0.5);
       }
     }
   }
