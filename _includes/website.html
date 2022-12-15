@@ -14,7 +14,9 @@
           </div>
           <div class="cell right-bar grid-x align-middle shrink">
             <div class="shrink cell mickey-container">
-              <img class="mickey" src="/img/mickey.svg" alt="Mickey Silhouette">
+              <!-- <img class="mickey" src="/img/mickey.svg" alt="Mickey Silhouette"> -->
+              {% capture location %}website{% endcapture %}
+              {% include mickey.svg %}
             </div>
             <div class="shrink cell">
               <i class="fas fa-redo"></i>

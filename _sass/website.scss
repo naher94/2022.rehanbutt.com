@@ -56,9 +56,14 @@
         }
         .mickey-container{
           margin-inline-end: 0.5em;
-          .mickey{
+          .mickey-website{
             height: 1em;
-            margin-bottom: 0.25em;
+            // TODO check if margin is still needed with inline SVG method
+            // margin-bottom: 0.25em;
+            fill: $navy-black;
+            @media (prefers-color-scheme: dark) {
+              fill: $pure-white;
+            }
           }
         }
         .fa-redo{
@@ -78,6 +83,8 @@
       padding: 2em;
       @media (prefers-color-scheme: dark) {
         background-color: $navy-black;
+        // color: #ef66bd;
+        color: $pure-white;
       }
       @include breakpoint(small only) {
         padding: 1em;
