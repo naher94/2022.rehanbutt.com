@@ -10,6 +10,9 @@
     @include breakpoint(small only) {
       padding: 1rem;
     }
+    @media (prefers-color-scheme: dark) {
+      background-color: $navy-black;
+    }
   }
   h2{
     font-family: $montserrat;
@@ -68,6 +71,9 @@
         &:hover{
           .text-container{
             background-color: rgba($navy-black, .1);
+            @media (prefers-color-scheme: dark) {
+              background-color: rgba($navy-black-l1, 0.75);
+            }
           }
         }
         img{
