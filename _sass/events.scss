@@ -7,6 +7,9 @@
   .content-area{
     background-color: #0789FF;
     border-radius: $tile-radius-medium;
+    @media (prefers-color-scheme: dark) {
+      background-color: #09467f;
+    }
   }
   .text-container{
     padding-left: 3rem;
@@ -77,6 +80,9 @@
         height: 120px;
         @include breakpoint(small only) {
           height: 80px;
+        }
+        @media (prefers-color-scheme: dark) {
+          filter: none;
         }
       }
     }
