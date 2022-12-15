@@ -17,6 +17,16 @@
       @include breakpoint(small only){
         width: 10em;
       }
+      g{
+        g{
+          path{
+            fill: white;
+            @media (prefers-color-scheme: dark) {
+              fill: $navy-black-d3;
+            }
+          }
+        }
+      }
     }
     .chocolate-bits{
       position: absolute;
