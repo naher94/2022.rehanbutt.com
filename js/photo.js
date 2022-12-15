@@ -1,5 +1,24 @@
 $('.window-shade').on('click', function(){
+    console.log("in shade thing");
 	$(this).toggleClass('closed');
+});
+
+const elements = document.querySelectorAll('.window-shade'); // select all elements with the class 'box'
+
+window.addEventListener('scroll', () => { // listen for the 'scroll' event on the window
+  elements.forEach(element => { // iterate over each element
+    const x = element.getBoundingClientRect().x; // get the x-coordinate of the element
+    let threshold = 0.2 * window.innerWidth; // set the default threshold to 20% of the window's width
+    if (matchMedia('(max-width: 640px)').matches) { // check if the viewport width is at most 640px (mobile breakpoint)
+      threshold = -0.1 * window.innerWidth; // set the threshold to 10% of the window's width
+    }
+    if (x <= threshold) { // check if the x-coordinate is at the threshold
+      element.classList.add('closed'); // add the class 'black-box' to the element
+    }
+    if (x > threshold) { // check if the x-coordinate is at the threshold
+        element.classList.remove('closed'); // remove the class
+      }
+  });
 });
 
 $(function () {

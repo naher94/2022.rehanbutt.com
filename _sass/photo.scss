@@ -1,14 +1,10 @@
-body, html {
-  overflow-x: hidden; //TODO not working
-}
-
 .photo{
   position: relative;
   margin-top: 2rem;
   .content-card{
     background-color: #E9E9E9;
-    overflow: hidden; //TODO not working
     border-radius: $tile-radius-medium;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); //For faux overflow hidden
   }
 }
 
@@ -147,7 +143,6 @@ $windowBorder: 20px;
     right: 0;
     &--active {
       position: fixed;
-      //TODO figure out how to have overflow hidden for the card. seems to fight with position fixed.
     }
     &--ended {
       position: absolute;
@@ -204,6 +199,10 @@ $windowBorder: 20px;
   color: #E0C200;
   border: none;
   min-width: 30em;
+  
+  @include breakpoint(small only) {
+    min-width: 25em;
+  }
 }
 
 .mickey-epcot{
