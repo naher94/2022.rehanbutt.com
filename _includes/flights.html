@@ -27,7 +27,7 @@
 
 
           <div class="grid-x cell">
-            {% assign location-list = "(iad|Washington DC|USA),(doh|Doha|Qatar),(lhr|London|UK),(lgw|London|UK),(dxb|Dubai|UAE),(CMN|Casablanca|Morocco),(agp|Malaga|Spain),(BWI|Baltimore|USA),(MCO|Orlando|USA),(lax|Los Angeles|USA),(AMN|Amman|Jordan)" | remove: "(" | remove: ")" | split: ',' %}
+            {% assign location-list = "(iad|Washington DC|USA),(doh|Doha|Qatar),(dxb|Dubai|UAE),(lhr|London|UK),(lgw|London|UK),(agp|Malaga|Spain),(CMN|Casablanca|Morocco),(BWI|Baltimore|USA),(MCO|Orlando|USA),(lax|Los Angeles|USA),(AMN|Amman|Jordan)" | remove: "(" | remove: ")" | split: ',' %}
             {% for item in location-list %}
             {% assign each = item | split: '|' %}
             <div class="grid-x cell airport-row align-right">
