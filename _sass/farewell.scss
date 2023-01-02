@@ -38,6 +38,9 @@
         top: -3em;
         right: -1em;
       }
+      @media (prefers-color-scheme: dark){
+        filter: none;
+      }
     }
     .golden-ticket{
       position: absolute;
@@ -144,6 +147,9 @@
         transform: rotate(-3deg);
         img{
           height: 105%;
+          @media (prefers-color-scheme: dark){
+            filter: none;
+          }
         }
         @include breakpoint(small only){
           right: 7.5em;
@@ -205,6 +211,9 @@
         .badge-sticker{
           width: 12em;
           transform: translate(-2em) rotate(-15deg);
+          @media (prefers-color-scheme: dark){
+            filter: none;
+          }
         }
         .icon-wrapper{
           aspect-ratio: 1/1;

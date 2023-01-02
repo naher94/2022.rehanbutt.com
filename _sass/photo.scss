@@ -5,6 +5,9 @@
     background-color: #E9E9E9;
     border-radius: $tile-radius-medium;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); //For faux overflow hidden
+    @media (prefers-color-scheme: dark) {
+      background-color: $navy-black;
+    }
   }
 }
 
@@ -15,6 +18,9 @@ $windowBorder: 20px;
   border: 2px solid #CCCCCC;
   border-radius: $windowBorder / 1.5;
   overflow: hidden;
+  @media (prefers-color-scheme: dark) {
+    border-color: $navy-black-d4;
+  }
   .window-shade{
     position: absolute;
     left: 0;
@@ -31,6 +37,12 @@ $windowBorder: 20px;
     transition: 0.6s all ease-in-out;
     cursor: pointer;
     z-index: 1;
+    @media (prefers-color-scheme: dark) {
+      background: $navy-black-d1;
+      box-shadow: 
+      0 0 0 2px $navy-black-d4,
+      0 0 30px rgba(black,0.4);
+    }
     .cell{
       text-align: center;
     }
@@ -52,6 +64,9 @@ $windowBorder: 20px;
       
       border-radius: 4px;
       background-color: #bbbbbb;
+      @media (prefers-color-scheme: dark) {
+        background-color: $navy-black-l1;
+      }
     }
     .photo-title, .photo-location{
       font-family: $lato;
@@ -83,6 +98,9 @@ $windowBorder: 20px;
   overflow: hidden;
   background-color: $pure-white;
   height: 20em;
+  @media (prefers-color-scheme: dark) {
+    background-color: $pure-black; 
+  }
   @include breakpoint(small only){
     font-size: 80%;
   }
@@ -112,6 +130,9 @@ $windowBorder: 20px;
         background-color: #1A1A1A;
         padding: 0.5em;
         border-radius: $tile-radius;
+        @media (prefers-color-scheme: dark) {
+          background-color: #202020;
+        }
         .flip-label{
           color: white;
           text-transform: uppercase;
@@ -171,6 +192,10 @@ $windowBorder: 20px;
       border-radius: 50px;
       margin-right: 1rem;
       margin-left: 1rem;
+      @media (prefers-color-scheme: dark) {
+        background: $navy-black-d3;
+        border-color: $navy-black-d4;
+      }
       &:first-of-type, &:last-of-type{
         min-width: 20rem;
         background: none;
@@ -199,7 +224,9 @@ $windowBorder: 20px;
   color: #E0C200;
   border: none;
   min-width: 30em;
-  
+  @media (prefers-color-scheme: dark) {
+    background-color: #151515;
+  }
   @include breakpoint(small only) {
     min-width: 25em;
   }
@@ -208,4 +235,7 @@ $windowBorder: 20px;
 .mickey-epcot{
   fill: $navy-black;
   width: 1.5em;
+  @media (prefers-color-scheme: dark) {
+    fill: $pure-white;
+  }
 }
