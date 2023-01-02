@@ -58,7 +58,7 @@ $movie-list-text-shadow: 0 0 10px $pure-black;
     }
     .bucket-container{
       #popcorn-10{
-        fill: $popcorn-yellow-1;
+        fill: semantic-color(popcorn-1);
         position: absolute;
         right: 1em;
         bottom: 3em;
@@ -68,7 +68,7 @@ $movie-list-text-shadow: 0 0 10px $pure-black;
         }
       }
       #popcorn-11{
-        fill: $popcorn-yellow-3;
+        fill: semantic-color(popcorn-3);
         position: absolute;
         right: -3em;
         bottom: 3em;
@@ -128,11 +128,11 @@ $movie-list-text-shadow: 0 0 10px $pure-black;
           }
           .popcorn{
             position: absolute;
-            fill: $popcorn-yellow-1;
+            fill: semantic-color(popcorn-1);
             z-index: -1;
           }
           #popcorn-1{
-            fill: $popcorn-yellow-1;
+            fill: semantic-color(popcorn-1);
             top: 25%;
             bottom: 0;
             right: -50%;
@@ -140,21 +140,21 @@ $movie-list-text-shadow: 0 0 10px $pure-black;
             transform: rotate(15deg);
           }
           #popcorn-2{
-            fill: $popcorn-yellow-2;
+            fill: semantic-color(popcorn-2);
             bottom: -30%;
             left: 30%;
             width: 50%;
             transform: rotate(-15deg);
           }
           #popcorn-3{
-            fill: $popcorn-yellow-3;
+            fill: semantic-color(popcorn-3);
             top: -30%;
             left: -75%;
             width: 120%;
             transform: rotate(-20deg);
           }
           #popcorn-14{
-            fill: $popcorn-yellow-1;
+            fill: semantic-color(popcorn-1);
             bottom: -26%;
             right: -52%;
             transform: rotate(20deg) scale(0.5);
@@ -176,6 +176,7 @@ $movie-list-text-shadow: 0 0 10px $pure-black;
           left: -0.35em;
           color: $pure-black;
           -webkit-text-stroke: 2px $pure-white;
+          z-index: 2;
         }
         img{
           border-radius: $tile-radius;
@@ -398,7 +399,7 @@ $movie-list-text-shadow: 0 0 10px $pure-black;
         }
       }
       #popcorn-4{
-        fill: $popcorn-yellow-3;
+        fill: semantic-color(popcorn-3);
         bottom: -80%;
         right: -15%;
         position: absolute;
@@ -410,7 +411,7 @@ $movie-list-text-shadow: 0 0 10px $pure-black;
         }
       }
       #popcorn-5{
-        fill: $popcorn-yellow-1;
+        fill: semantic-color(popcorn-1);
         bottom: -60%;
         right: 30%;
         position: absolute;
@@ -463,7 +464,7 @@ $movie-list-text-shadow: 0 0 10px $pure-black;
         }
       }
       #popcorn-6{
-        fill: $popcorn-yellow-2;
+        fill: semantic-color(popcorn-2);
         position: absolute;
         width: 2em;
         transform: rotate(12deg);
@@ -471,7 +472,7 @@ $movie-list-text-shadow: 0 0 10px $pure-black;
         left: 16%;
       }
       #popcorn-7{
-        fill: $popcorn-yellow-2;
+        fill: semantic-color(popcorn-2);
         position: absolute;
         width: 1.5em;
         transform: rotate(25deg);
@@ -533,7 +534,7 @@ $movie-list-text-shadow: 0 0 10px $pure-black;
           transform: scale(0.5) rotate(-10deg);
           transition: $run;
           #popcorn-8{
-            fill: $popcorn-yellow-1;
+            fill: semantic-color(popcorn-1);
             position: absolute;
           }
         }
@@ -544,7 +545,7 @@ $movie-list-text-shadow: 0 0 10px $pure-black;
           transform: scale(0.40) rotate(5deg);
           transition: $run;
           #popcorn-9{
-            fill: $popcorn-yellow-2;
+            fill: semantic-color(popcorn-2);
             position: absolute;
           }
         }
@@ -613,7 +614,7 @@ $movie-list-text-shadow: 0 0 10px $pure-black;
       }
       #popcorn-12{
         position: absolute;
-        fill: $popcorn-yellow-3;
+        fill: semantic-color(popcorn-2);
         bottom: -150%;
         right: -51%;
         transform: scale(1.2) rotate(23deg);
@@ -624,7 +625,7 @@ $movie-list-text-shadow: 0 0 10px $pure-black;
       }
       #popcorn-13{
         position: absolute;
-        fill: $popcorn-yellow-2;
+        fill: semantic-color(popcorn-2);
         bottom: -3%;
         right: -10%;
         transform: scale(0.3);
