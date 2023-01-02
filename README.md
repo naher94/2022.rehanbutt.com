@@ -1,3 +1,3 @@
-# 2021 Year in Review
+# 2022 Year in Review
 
-<!-- ## Check it out! Enjoy! [2021.rehanbutt.com](https://2021.rehanbutt.com) -->
+## Check it out! Enjoy! [2022.rehanbutt.com](https://2022.rehanbutt.com)
