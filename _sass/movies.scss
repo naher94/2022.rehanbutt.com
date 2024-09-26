@@ -459,8 +459,10 @@ $movie-list-text-shadow: 0 0 10px $pure-black;
         font-weight: $zilla-light;
         font-size: 0.75em;
         color: #4d4d4d;
-        i{
-          font-size: 0.6em;
+        svg{
+          width: 0.6em;
+          fill: #4d4d4d;
+          margin-inline-end: 0.25em;
         }
       }
       #popcorn-6{
@@ -663,10 +665,11 @@ $movie-list-text-shadow: 0 0 10px $pure-black;
         z-index: 2;
         p{
           &:first-of-type{
-            i{
-              font-size: 0.6em;
+            svg{
+              width: 1em;
               margin-right: 0.25em;
               margin-top: 0.1em;
+              fill: $pure-white;
             }
           }
         }

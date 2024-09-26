@@ -117,7 +117,10 @@
           <p>watched</p>
           <p class="number">120</p> 
           <p>featured films</p>
-          <p class="sub-description"><i class="fas fa-history"></i> 49% were rewatches</p>
+          <p class="sub-description">
+            {%- include_relative img/history.svg -%}
+            49% were rewatches
+          </p>
         </div>
         {% capture name %}6{% endcapture %}
         {% include popcorn.svg %}
@@ -164,7 +167,10 @@
       </div>
       <div class="rewatch">
         <div class="text-container">
-          <p class="grid-x align-middle"><i class="fas fa-history"></i> rewatched</p>
+          <p class="grid-x align-middle">
+            {%- include_relative img/history.svg -%}
+            rewatched
+          </p>
           <p class="number">Harry Potter</p> 
           <p>collection</p>
         </div>
