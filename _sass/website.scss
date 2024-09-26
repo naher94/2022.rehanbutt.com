@@ -45,7 +45,10 @@
           background-color: $navy-black;
         }
         .fa-lock{
+          fill: semantic-color(text);
+          width: 1em;
           margin-inline-end: 0.5em;
+          margin-block-start: 0.5em;
         }
         a{
           font-weight: $lato-bold;
@@ -67,6 +70,8 @@
           }
         }
         .fa-redo{
+          fill: semantic-color(text);
+          width: 1em;
           &:hover{
             transform: rotate(360deg);
             transition: $run;
