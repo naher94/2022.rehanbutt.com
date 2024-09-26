@@ -102,9 +102,14 @@
           border-radius: $pill-radius;
           text-align: center;
           transition: $sprint;
+          height: 100%;
           i{
             font-size: 1.3em;
             vertical-align: text-top;
+          }
+          svg{
+            width: 1.3em;
+            fill: semantic-color(text);
           }
         }
       }
