@@ -10,7 +10,7 @@
           {%- for song in songs_order -%}
           {% capture song-card %}
             <div class="album-cover-wrapper cell shrink">
-              <img src="img/{{song.album-cover}}" alt="Dance Dance Dance Album Cover" class="album-cover">
+              <img src="img/{{song.album-cover}}" alt="{{song.song-name}} Album Cover" class="album-cover">
             </div>
             <div class="text-container cell auto grid-x">
               <div class="cell grid-x align-middle">
