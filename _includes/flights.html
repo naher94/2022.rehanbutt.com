@@ -8,7 +8,7 @@
             <h2>flight log</h2>
           </div>
           <div class="cell shrink">
-            <i class="fas fa-plane"></i>
+            {%- include_relative /img/plane.svg -%}
           </div>
         </div>
         <div class="grid-x cell data-area align-right">
@@ -51,15 +51,24 @@
           <div class="grid-x cell align-right border-top">
             <div class="cell lockup-medium shrink">
               <p class="text-top">airports</p>
-              <p class="number-big"><i class="fas fa-plane"></i> 11</p>
+              <p class="number-big">
+                {%- include_relative /img/plane.svg -%}
+                11
+              </p>
             </div>
             <div class="cell lockup-medium shrink border-left">
               <p class="text-top">countries</p>
-              <p class="number-big"><i class="fas fa-globe"></i> 7</p>
+              <p class="number-big">
+                {%- include_relative /img/globe.svg -%}
+                7
+              </p>
             </div>
             <div class="cell lockup-medium auto medium-shrink border-left">
               <p class="text-top">flight time</p>
-              <p class="number-big"><i class="fas fa-clock"></i> 3d 22h</p>
+              <p class="number-big">
+                {%- include_relative /img/clock.svg -%}
+                3d 22h
+              </p>
             </div>
           </div>
         </div>
