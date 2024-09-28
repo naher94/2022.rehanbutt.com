@@ -222,6 +222,11 @@
           border: 2px solid rgba($pure-black,0.075);
           width: 3em;
           text-align: center;
+          svg{
+            fill: $pure-black;
+            height: 1.25em;
+            margin-top: 0.25em;
+          }
         }
         .win-list{
           @include breakpoint(small only){
