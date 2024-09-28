@@ -40,6 +40,14 @@
           padding-left: 0.25em;
           padding-right: 0.25em;
         }
+        svg{
+          height: 1em;
+          padding-top: 0.25em;
+          margin-left: 0.5em;
+          margin-right: 0.5em;
+          fill: $pure-white;
+          scale: 1.5;
+        }
       }
       .logo-container{
         text-align: center;
